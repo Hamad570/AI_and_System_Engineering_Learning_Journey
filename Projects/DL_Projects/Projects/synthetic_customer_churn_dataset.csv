@@ -1,0 +1,651 @@
+CustomerID,Age,Gender,Location,SubscriptionDurationMonths,MonthlyCharges,ContractType,PaymentMethod,OnlineSecurity,TechSupport,StreamingTV,StreamingMovies,TotalCharges,Churn
+CUST-0001,47,Female,Chicago,36,92.36,Month-to-month,Mailed check,No,Yes,Yes,Yes,3345.61,0
+CUST-0002,67,Female,Phoenix,47,29.28,Month-to-month,Credit card (automatic),Yes,Yes,No,No internet service,1441.35,0
+CUST-0003,41,Female,Los Angeles,16,116.36,Month-to-month,Bank transfer (automatic),No internet service,Yes,Yes,No internet service,1913.59,1
+CUST-0004,26,Male,Los Angeles,54,115.28,Month-to-month,Credit card (automatic),No,No,Yes,No,6230.24,1
+CUST-0005,71,Female,Chicago,37,103.27,One year,Electronic check,No internet service,Yes,Yes,Yes,3874.93,0
+CUST-0006,72,Female,Phoenix,9,48.3,Month-to-month,Electronic check,No,Yes,No internet service,No internet service,372.61,1
+CUST-0007,28,Male,New York,40,20.09,Month-to-month,Mailed check,No,No,Yes,Yes,791.03,0
+CUST-0008,33,Female,Houston,14,101.38,Month-to-month,Bank transfer (automatic),No,No,No,Yes,1418.67,0
+CUST-0009,30,Female,Houston,60,40.21,Month-to-month,Bank transfer (automatic),Yes,No,Yes,No,2460.69,0
+CUST-0010,71,Male,Chicago,48,39.65,Month-to-month,Mailed check,No,No,No,No,1912.89,0
+CUST-0011,53,Female,Phoenix,32,105.3,Two year,Bank transfer (automatic),No,No,Yes,No,3402.28,0
+CUST-0012,46,Male,New York,24,25.2,Month-to-month,Electronic check,No internet service,No internet service,Yes,No,667.44,1
+CUST-0013,52,Female,Phoenix,7,97.77,Month-to-month,Bank transfer (automatic),No,No,No internet service,No internet service,662.92,0
+CUST-0014,79,Male,Chicago,13,52.43,One year,Credit card (automatic),Yes,No internet service,No,No,686.25,0
+CUST-0015,45,Female,Houston,35,83.33,One year,Bank transfer (automatic),No,No,No,Yes,2881.3,0
+CUST-0016,57,Female,New York,68,68.62,Month-to-month,Electronic check,No internet service,No,Yes,Yes,4600.12,0
+CUST-0017,65,Male,Houston,45,39.23,Month-to-month,Electronic check,No internet service,No internet service,No internet service,Yes,1676.24,0
+CUST-0018,77,Male,Los Angeles,64,42.55,One year,Bank transfer (automatic),No,No,No,No internet service,2671.46,0
+CUST-0019,75,Female,Chicago,3,100.39,Month-to-month,Credit card (automatic),No,No internet service,No internet service,No,281.42,1
+CUST-0020,62,Female,Chicago,68,73.78,Two year,Electronic check,No internet service,No internet service,No,Yes,4949.52,0
+CUST-0021,57,Male,Phoenix,58,76.87,Month-to-month,Bank transfer (automatic),No,No,No internet service,Yes,4483.11,0
+CUST-0022,74,Female,Phoenix,56,44.45,Two year,Electronic check,No internet service,No,Yes,Yes,2419.54,0
+CUST-0023,20,Male,Chicago,15,95.58,Month-to-month,Credit card (automatic),No internet service,No internet service,No internet service,Yes,1450.84,0
+CUST-0024,54,Female,Phoenix,37,70.91,One year,Bank transfer (automatic),Yes,Yes,No,Yes,2625.28,0
+CUST-0025,34,Female,Phoenix,9,59.44,Month-to-month,Bank transfer (automatic),Yes,Yes,No,Yes,526.24,0
+CUST-0026,65,Male,Chicago,10,56.29,Month-to-month,Bank transfer (automatic),Yes,No,Yes,No internet service,548.23,0
+CUST-0027,58,Female,Phoenix,31,70.07,Month-to-month,Electronic check,No internet service,No internet service,No,Yes,2227.54,0
+CUST-0028,70,Female,Houston,45,25.14,Month-to-month,Mailed check,No,No internet service,Yes,Yes,1078.48,0
+CUST-0029,47,Male,New York,72,93.55,One year,Bank transfer (automatic),No,Yes,Yes,No,6720.96,0
+CUST-0030,30,Female,Chicago,3,53.31,Month-to-month,Bank transfer (automatic),No internet service,Yes,Yes,No internet service,226.06,0
+CUST-0031,75,Female,Houston,56,86.77,One year,Electronic check,No internet service,No,No internet service,Yes,4835.71,0
+CUST-0032,51,Female,Chicago,49,32.24,One year,Mailed check,No internet service,No,Yes,No,1505.54,0
+CUST-0033,45,Male,Chicago,62,106.77,One year,Mailed check,No internet service,No,No internet service,No,6538.31,1
+CUST-0034,41,Male,Chicago,40,113.1,Month-to-month,Credit card (automatic),No internet service,No internet service,Yes,Yes,4580.13,0
+CUST-0035,20,Female,Chicago,18,114.75,Month-to-month,Mailed check,Yes,No,No,Yes,2091.42,0
+CUST-0036,44,Male,Houston,63,35.12,Month-to-month,Credit card (automatic),Yes,Yes,No internet service,Yes,2119.22,0
+CUST-0037,70,Male,Chicago,44,115.49,Month-to-month,Electronic check,No,Yes,Yes,No internet service,5008.9,0
+CUST-0038,66,Male,New York,68,78.48,Two year,Mailed check,No internet service,No,Yes,Yes,5348.58,0
+CUST-0039,64,Female,Los Angeles,26,102.57,Month-to-month,Credit card (automatic),No,No,No,No,2625.44,0
+CUST-0040,32,Female,Phoenix,6,102.36,Month-to-month,Credit card (automatic),No,Yes,Yes,No,632.83,0
+CUST-0041,38,Male,Phoenix,7,102.13,Month-to-month,Credit card (automatic),No internet service,No,No,Yes,698.3,0
+CUST-0042,32,Female,New York,57,85.17,Two year,Mailed check,No,Yes,No internet service,No internet service,4910.15,0
+CUST-0043,70,Male,Houston,56,47.64,Month-to-month,Bank transfer (automatic),No internet service,No internet service,No,No internet service,2585.71,0
+CUST-0044,44,Female,New York,48,62.47,Month-to-month,Credit card (automatic),No,No internet service,No,Yes,3026.21,0
+CUST-0045,60,Male,Los Angeles,4,112.12,Month-to-month,Mailed check,Yes,No internet service,No,Yes,467.24,0
+CUST-0046,36,Female,Chicago,20,105.81,Month-to-month,Credit card (automatic),Yes,No internet service,No,Yes,2062.48,0
+CUST-0047,19,Male,Houston,64,99.62,One year,Bank transfer (automatic),Yes,Yes,No,Yes,6291.48,0
+CUST-0048,49,Male,Chicago,36,45.0,One year,Mailed check,No internet service,No,Yes,No internet service,1749.85,0
+CUST-0049,58,Female,Los Angeles,64,104.94,Month-to-month,Mailed check,No internet service,No internet service,Yes,No internet service,6774.39,0
+CUST-0050,48,Male,Chicago,29,71.43,Month-to-month,Electronic check,Yes,Yes,No internet service,Yes,2110.72,1
+CUST-0051,24,Male,Houston,64,58.91,Month-to-month,Credit card (automatic),No,Yes,Yes,Yes,3728.34,1
+CUST-0052,65,Male,New York,17,61.71,One year,Mailed check,No,Yes,Yes,Yes,1029.73,0
+CUST-0053,37,Female,Chicago,26,55.05,Month-to-month,Credit card (automatic),No,No,No,Yes,1493.81,0
+CUST-0054,21,Female,Houston,6,77.59,Two year,Bank transfer (automatic),Yes,No,Yes,Yes,434.31,1
+CUST-0055,49,Male,Houston,71,71.73,Month-to-month,Mailed check,No,Yes,Yes,No internet service,5086.61,1
+CUST-0056,47,Male,Phoenix,17,46.59,One year,Bank transfer (automatic),No,No,No,No,731.22,0
+CUST-0057,61,Male,Los Angeles,13,67.6,One year,Bank transfer (automatic),No internet service,Yes,No,No,897.18,1
+CUST-0058,26,Female,New York,34,77.77,Month-to-month,Electronic check,No,No,Yes,No,2631.57,0
+CUST-0059,64,Male,Los Angeles,14,66.78,Month-to-month,Electronic check,No,No internet service,No internet service,Yes,1004.39,1
+CUST-0060,56,Male,Houston,31,63.83,Month-to-month,Credit card (automatic),No internet service,No internet service,Yes,No internet service,1948.14,0
+CUST-0061,25,Female,New York,14,22.84,One year,Bank transfer (automatic),Yes,No,Yes,Yes,312.74,0
+CUST-0062,26,Male,Phoenix,62,47.87,One year,Credit card (automatic),No,No internet service,No internet service,Yes,3037.54,0
+CUST-0063,55,Male,Phoenix,32,112.94,Month-to-month,Mailed check,Yes,No internet service,No internet service,Yes,3663.5,1
+CUST-0064,50,Female,Houston,34,77.87,Month-to-month,Electronic check,Yes,No internet service,Yes,No,2649.67,0
+CUST-0065,73,Male,Houston,64,66.7,Month-to-month,Bank transfer (automatic),No,No internet service,No internet service,No,4255.21,1
+CUST-0066,69,Male,Los Angeles,40,46.68,Month-to-month,Credit card (automatic),Yes,Yes,Yes,No,1796.03,0
+CUST-0067,63,Female,New York,66,98.79,Month-to-month,Electronic check,Yes,No,No,No,6571.25,0
+CUST-0068,47,Female,Phoenix,56,21.09,Month-to-month,Credit card (automatic),No,No,No internet service,Yes,1118.77,0
+CUST-0069,68,Male,Los Angeles,15,107.09,Month-to-month,Credit card (automatic),No internet service,Yes,No,Yes,1642.28,1
+CUST-0070,52,Female,Houston,69,119.66,One year,Electronic check,Yes,Yes,Yes,Yes,8290.16,0
+CUST-0071,76,Female,New York,40,26.95,Two year,Mailed check,No,Yes,No,No,1116.54,0
+CUST-0072,39,Female,Houston,68,80.29,Two year,Mailed check,Yes,No,No internet service,No internet service,5469.59,1
+CUST-0073,51,Male,Los Angeles,12,59.65,Two year,Credit card (automatic),Yes,No internet service,Yes,No,853.77,0
+CUST-0074,29,Female,Houston,72,41.51,Month-to-month,Mailed check,No,No internet service,No internet service,No internet service,3055.23,0
+CUST-0075,75,Female,New York,61,82.95,Two year,Electronic check,No,No,No,Yes,5017.77,0
+CUST-0076,50,Male,Los Angeles,13,79.02,Month-to-month,Electronic check,No internet service,No,No,Yes,1080.92,0
+CUST-0077,68,Female,Chicago,39,64.76,One year,Credit card (automatic),Yes,Yes,No internet service,No,2382.77,0
+CUST-0078,53,Female,Houston,27,92.53,Month-to-month,Mailed check,Yes,No internet service,No internet service,No,2390.36,0
+CUST-0079,32,Male,New York,36,118.83,Month-to-month,Bank transfer (automatic),No,Yes,Yes,No internet service,4272.57,1
+CUST-0080,54,Male,Phoenix,47,38.58,Month-to-month,Bank transfer (automatic),No internet service,No,No,No,1905.12,0
+CUST-0081,76,Female,New York,1,108.96,One year,Bank transfer (automatic),No,No internet service,Yes,No,107.43,0
+CUST-0082,66,Male,New York,51,54.79,Month-to-month,Mailed check,Yes,Yes,Yes,Yes,2789.45,0
+CUST-0083,59,Male,New York,15,44.61,Two year,Credit card (automatic),Yes,No internet service,Yes,No internet service,735.37,0
+CUST-0084,50,Male,Phoenix,34,25.62,Month-to-month,Credit card (automatic),No internet service,No,Yes,No internet service,911.51,0
+CUST-0085,62,Male,Los Angeles,20,53.13,One year,Credit card (automatic),No,No,No internet service,No internet service,1056.73,0
+CUST-0086,34,Male,Los Angeles,3,92.42,Two year,Bank transfer (automatic),No internet service,No,Yes,Yes,247.07,0
+CUST-0087,32,Male,Chicago,21,36.33,Month-to-month,Bank transfer (automatic),Yes,No internet service,Yes,No,803.05,1
+CUST-0088,47,Male,Houston,63,28.69,One year,Credit card (automatic),No,No internet service,No,No internet service,1802.93,0
+CUST-0089,30,Male,Phoenix,27,103.81,Month-to-month,Mailed check,No,No internet service,No,Yes,2829.93,0
+CUST-0090,72,Male,Los Angeles,16,102.78,Month-to-month,Electronic check,No,No,No,Yes,1572.88,0
+CUST-0091,68,Female,Los Angeles,36,60.76,Month-to-month,Electronic check,Yes,No,Yes,No internet service,2260.42,0
+CUST-0092,23,Male,New York,17,89.17,Month-to-month,Mailed check,Yes,No internet service,No internet service,Yes,1490.65,1
+CUST-0093,61,Female,Phoenix,50,64.62,Month-to-month,Electronic check,Yes,No,No internet service,No internet service,3131.07,0
+CUST-0094,39,Female,New York,68,86.55,Two year,Bank transfer (automatic),No,No,Yes,Yes,5900.63,0
+CUST-0095,67,Female,Houston,9,115.78,Month-to-month,Mailed check,Yes,No,Yes,No internet service,1038.11,1
+CUST-0096,36,Female,Phoenix,22,33.17,Month-to-month,Bank transfer (automatic),No,Yes,No,No internet service,627.93,0
+CUST-0097,54,Male,Los Angeles,54,83.34,Month-to-month,Bank transfer (automatic),No internet service,Yes,No internet service,No internet service,4460.54,0
+CUST-0098,67,Male,Houston,2,106.16,Two year,Bank transfer (automatic),Yes,Yes,Yes,Yes,194.74,0
+CUST-0099,65,Female,New York,39,114.74,Two year,Mailed check,No internet service,Yes,No,No,4561.66,0
+CUST-0100,60,Female,Phoenix,59,69.12,Month-to-month,Mailed check,No,No,No,Yes,4134.9,0
+CUST-0101,57,Male,Phoenix,52,60.12,Two year,Mailed check,Yes,No,No internet service,Yes,3039.61,0
+CUST-0102,21,Female,Chicago,40,117.34,Two year,Mailed check,Yes,No,No internet service,Yes,4671.34,0
+CUST-0103,33,Female,New York,13,45.72,One year,Credit card (automatic),No internet service,No,No,No,607.06,0
+CUST-0104,26,Female,Phoenix,45,113.88,Month-to-month,Electronic check,No internet service,No,Yes,Yes,5104.54,1
+CUST-0105,53,Female,Phoenix,20,93.19,Month-to-month,Bank transfer (automatic),Yes,No,Yes,Yes,1861.3,0
+CUST-0106,25,Male,Los Angeles,20,118.01,One year,Bank transfer (automatic),No internet service,Yes,Yes,No internet service,2230.07,0
+CUST-0107,41,Female,New York,62,72.23,Month-to-month,Electronic check,Yes,Yes,No internet service,No,4325.01,0
+CUST-0108,21,Male,Houston,53,39.24,Month-to-month,Mailed check,No,Yes,Yes,Yes,2086.69,0
+CUST-0109,18,Male,Los Angeles,61,87.18,Month-to-month,Credit card (automatic),No internet service,No,No,No internet service,5377.3,0
+CUST-0110,20,Male,Houston,12,76.34,Month-to-month,Mailed check,No internet service,No,Yes,Yes,892.45,0
+CUST-0111,38,Female,New York,53,111.98,Two year,Mailed check,Yes,Yes,No internet service,No,5950.57,1
+CUST-0112,51,Female,Houston,2,69.39,Two year,Bank transfer (automatic),No,No,No,Yes,208.03,0
+CUST-0113,41,Female,New York,70,56.84,Two year,Electronic check,Yes,No internet service,Yes,Yes,3962.08,0
+CUST-0114,34,Male,Phoenix,40,117.4,Month-to-month,Mailed check,No,No internet service,No internet service,No internet service,4676.28,0
+CUST-0115,49,Female,Phoenix,49,25.05,Month-to-month,Credit card (automatic),Yes,No,No,No,1158.39,1
+CUST-0116,43,Female,Phoenix,18,27.05,Month-to-month,Credit card (automatic),Yes,No internet service,No,Yes,406.97,1
+CUST-0117,70,Male,Los Angeles,9,29.25,Month-to-month,Mailed check,No internet service,Yes,No,Yes,272.22,0
+CUST-0118,40,Male,Chicago,68,25.24,Month-to-month,Bank transfer (automatic),No internet service,No,Yes,Yes,1670.28,0
+CUST-0119,32,Female,Houston,8,113.41,Month-to-month,Credit card (automatic),No,No,No,No,908.1,0
+CUST-0120,41,Female,New York,5,74.01,Month-to-month,Credit card (automatic),Yes,Yes,No internet service,No internet service,405.89,0
+CUST-0121,51,Female,Los Angeles,61,73.76,Month-to-month,Electronic check,No,No,No,No internet service,4466.18,0
+CUST-0122,22,Male,Los Angeles,28,32.5,Two year,Mailed check,No internet service,No,Yes,No internet service,852.65,0
+CUST-0123,74,Female,Chicago,2,75.87,Two year,Bank transfer (automatic),No internet service,Yes,No internet service,No,163.95,0
+CUST-0124,54,Male,Houston,67,76.07,Two year,Bank transfer (automatic),No,No,No,No internet service,5042.55,0
+CUST-0125,51,Female,New York,6,32.68,Month-to-month,Electronic check,No,Yes,No internet service,No,135.73,0
+CUST-0126,43,Male,Houston,65,77.45,Month-to-month,Mailed check,No,Yes,No internet service,No,5035.77,0
+CUST-0127,64,Female,Phoenix,32,84.94,Month-to-month,Electronic check,No,Yes,No internet service,No internet service,2667.87,1
+CUST-0128,72,Female,Chicago,9,106.11,Month-to-month,Mailed check,No internet service,No,Yes,No,903.14,1
+CUST-0129,26,Male,Houston,45,110.46,One year,Electronic check,No,Yes,Yes,No internet service,4957.69,0
+CUST-0130,38,Female,Houston,54,105.01,One year,Mailed check,No internet service,Yes,No,Yes,5605.12,0
+CUST-0131,23,Male,Houston,56,82.94,One year,Electronic check,No internet service,No internet service,No,Yes,4670.66,0
+CUST-0132,58,Female,Chicago,60,59.38,Month-to-month,Credit card (automatic),No,No internet service,Yes,No internet service,3539.8,0
+CUST-0133,71,Female,New York,54,109.93,One year,Bank transfer (automatic),Yes,No,No,No internet service,5913.28,0
+CUST-0134,60,Female,Chicago,62,118.09,Month-to-month,Mailed check,Yes,No internet service,No internet service,No,7281.43,0
+CUST-0135,37,Female,Houston,30,119.32,Two year,Mailed check,No,No,No,Yes,3642.16,0
+CUST-0136,32,Male,Phoenix,2,58.45,Month-to-month,Bank transfer (automatic),No internet service,No internet service,No,Yes,171.69,0
+CUST-0137,52,Female,Phoenix,63,79.75,Month-to-month,Mailed check,No internet service,No,Yes,Yes,5004.58,0
+CUST-0138,43,Female,New York,12,81.92,One year,Bank transfer (automatic),Yes,Yes,Yes,Yes,1023.85,0
+CUST-0139,22,Male,New York,38,64.41,Month-to-month,Mailed check,Yes,No,Yes,Yes,2459.13,0
+CUST-0140,30,Male,Houston,4,70.12,One year,Credit card (automatic),No internet service,No,No internet service,Yes,199.02,0
+CUST-0141,29,Male,Los Angeles,46,74.84,One year,Mailed check,No internet service,Yes,Yes,Yes,3422.32,0
+CUST-0142,27,Male,Chicago,70,113.11,Month-to-month,Bank transfer (automatic),Yes,No,Yes,No,7913.63,0
+CUST-0143,72,Female,Los Angeles,43,117.74,One year,Credit card (automatic),No internet service,Yes,No,No internet service,5038.37,0
+CUST-0144,49,Male,Los Angeles,22,60.74,Month-to-month,Credit card (automatic),No internet service,No,Yes,No internet service,1306.75,0
+CUST-0145,64,Male,Los Angeles,41,119.45,One year,Electronic check,No,Yes,No internet service,Yes,4850.5,1
+CUST-0146,33,Female,New York,47,113.68,Two year,Mailed check,Yes,No,Yes,Yes,5327.31,0
+CUST-0147,58,Male,Los Angeles,16,104.37,Month-to-month,Credit card (automatic),Yes,Yes,No,No,1617.49,0
+CUST-0148,28,Female,Houston,12,98.82,Two year,Credit card (automatic),No internet service,Yes,No internet service,Yes,1202.23,0
+CUST-0149,70,Female,Houston,37,51.72,Month-to-month,Bank transfer (automatic),Yes,No,No internet service,No,1872.11,0
+CUST-0150,57,Female,New York,42,100.34,One year,Electronic check,Yes,No,No,Yes,4223.08,0
+CUST-0151,22,Female,Chicago,55,84.96,Month-to-month,Bank transfer (automatic),No,No internet service,No internet service,No internet service,4683.73,0
+CUST-0152,23,Male,Houston,9,28.97,One year,Electronic check,Yes,No,Yes,Yes,285.77,0
+CUST-0153,23,Female,Los Angeles,29,38.46,Month-to-month,Bank transfer (automatic),No,No internet service,No internet service,No internet service,1110.59,0
+CUST-0154,28,Male,New York,31,53.97,Month-to-month,Credit card (automatic),No internet service,No,No internet service,Yes,1746.01,0
+CUST-0155,63,Female,Chicago,21,64.21,Month-to-month,Mailed check,No internet service,Yes,Yes,No,1298.77,0
+CUST-0156,18,Female,Phoenix,7,95.56,One year,Mailed check,No internet service,No internet service,No,Yes,698.15,0
+CUST-0157,28,Male,Phoenix,71,67.15,Month-to-month,Mailed check,Yes,No,No internet service,No internet service,4824.95,1
+CUST-0158,57,Male,New York,71,75.21,Two year,Bank transfer (automatic),No,No internet service,No,Yes,5379.94,0
+CUST-0159,67,Male,Los Angeles,16,48.51,Month-to-month,Bank transfer (automatic),No,Yes,Yes,Yes,743.6,0
+CUST-0160,32,Male,Houston,63,71.78,One year,Electronic check,No,Yes,No,No internet service,4453.69,0
+CUST-0161,27,Female,Los Angeles,44,85.04,Month-to-month,Credit card (automatic),Yes,Yes,No internet service,Yes,3716.01,0
+CUST-0162,42,Male,Chicago,17,50.49,Month-to-month,Mailed check,No,No internet service,No,No internet service,837.12,0
+CUST-0163,23,Male,Chicago,9,61.87,Two year,Electronic check,No internet service,No,No internet service,No internet service,566.57,0
+CUST-0164,27,Male,Chicago,25,44.34,One year,Bank transfer (automatic),No,No,No,No,1152.49,0
+CUST-0165,69,Female,Houston,70,95.54,One year,Credit card (automatic),No internet service,Yes,No internet service,No,6734.0,0
+CUST-0166,37,Female,Phoenix,61,78.29,One year,Mailed check,No internet service,Yes,No internet service,No internet service,4774.5,0
+CUST-0167,20,Male,New York,32,59.94,Month-to-month,Mailed check,No,Yes,Yes,No internet service,1988.87,0
+CUST-0168,39,Female,New York,16,104.32,Month-to-month,Mailed check,No,No internet service,No internet service,No internet service,1636.55,1
+CUST-0169,56,Female,Houston,19,118.08,Two year,Bank transfer (automatic),Yes,No,No,No internet service,2148.78,0
+CUST-0170,44,Female,Chicago,5,108.74,Month-to-month,Bank transfer (automatic),No,No,No,Yes,543.95,0
+CUST-0171,46,Male,Houston,6,75.14,Month-to-month,Bank transfer (automatic),No,No,No internet service,Yes,344.82,1
+CUST-0172,43,Male,New York,19,59.24,One year,Bank transfer (automatic),Yes,Yes,No internet service,Yes,1104.42,0
+CUST-0173,58,Female,New York,2,103.0,Two year,Bank transfer (automatic),No internet service,No,Yes,Yes,230.05,1
+CUST-0174,50,Male,Chicago,24,47.84,Two year,Credit card (automatic),Yes,Yes,Yes,No,1134.26,0
+CUST-0175,74,Male,Chicago,31,82.72,Month-to-month,Credit card (automatic),No internet service,Yes,No,Yes,2541.82,0
+CUST-0176,40,Male,Phoenix,62,99.47,Month-to-month,Mailed check,No,No,Yes,No internet service,6171.97,0
+CUST-0177,70,Female,Houston,65,22.37,Month-to-month,Credit card (automatic),No internet service,No internet service,Yes,Yes,1514.51,0
+CUST-0178,56,Male,Phoenix,7,79.43,Month-to-month,Bank transfer (automatic),Yes,No internet service,No,No,614.03,1
+CUST-0179,48,Female,Phoenix,27,53.87,Two year,Credit card (automatic),No,No,No,No,1380.58,0
+CUST-0180,63,Male,Phoenix,6,88.85,Month-to-month,Credit card (automatic),No internet service,No,No internet service,No internet service,463.88,0
+CUST-0181,20,Female,New York,49,45.81,Two year,Bank transfer (automatic),Yes,No internet service,No,Yes,2361.35,0
+CUST-0182,70,Male,Los Angeles,72,29.86,Month-to-month,Credit card (automatic),Yes,Yes,No internet service,No,2134.02,0
+CUST-0183,43,Male,Houston,35,28.38,One year,Bank transfer (automatic),Yes,No internet service,Yes,No,974.88,0
+CUST-0184,54,Male,Houston,72,45.41,Month-to-month,Credit card (automatic),Yes,No internet service,No internet service,No,3139.94,0
+CUST-0185,66,Male,Chicago,32,34.17,Month-to-month,Bank transfer (automatic),No internet service,No,Yes,No,1073.93,0
+CUST-0186,32,Female,Chicago,71,66.22,Month-to-month,Mailed check,No,No,No,No,4758.21,0
+CUST-0187,41,Male,Phoenix,13,33.72,One year,Bank transfer (automatic),No,No,Yes,No,435.61,1
+CUST-0188,38,Male,Los Angeles,44,115.32,Two year,Mailed check,No internet service,Yes,No internet service,No internet service,5073.8,0
+CUST-0189,59,Female,Los Angeles,55,64.42,Month-to-month,Credit card (automatic),No,No,Yes,Yes,3535.72,0
+CUST-0190,53,Female,Los Angeles,49,114.88,Month-to-month,Credit card (automatic),No,No internet service,No internet service,Yes,5625.19,0
+CUST-0191,73,Female,New York,41,38.17,One year,Mailed check,No internet service,Yes,No internet service,No,1574.98,1
+CUST-0192,71,Male,Phoenix,3,76.68,Month-to-month,Credit card (automatic),Yes,No internet service,Yes,No,217.88,0
+CUST-0193,44,Male,New York,17,88.35,Two year,Credit card (automatic),No,No,No internet service,No internet service,1413.22,1
+CUST-0194,62,Female,Phoenix,4,40.3,Month-to-month,Mailed check,Yes,No internet service,No internet service,Yes,223.92,0
+CUST-0195,57,Male,Chicago,19,59.3,Month-to-month,Mailed check,Yes,No,Yes,Yes,1121.19,1
+CUST-0196,37,Female,Phoenix,30,92.85,Month-to-month,Mailed check,No internet service,No internet service,Yes,No internet service,2825.2,0
+CUST-0197,48,Female,Houston,31,76.84,One year,Credit card (automatic),No,Yes,No,No,2438.02,0
+CUST-0198,77,Female,New York,8,45.82,One year,Bank transfer (automatic),No,No,Yes,Yes,422.29,0
+CUST-0199,75,Female,Houston,71,89.43,Two year,Credit card (automatic),No,Yes,No,No,6340.47,0
+CUST-0200,74,Female,Houston,58,88.25,Month-to-month,Mailed check,No internet service,Yes,Yes,Yes,5123.69,0
+CUST-0201,72,Male,Chicago,68,32.11,Month-to-month,Mailed check,No internet service,No,No,No internet service,2234.09,1
+CUST-0202,18,Female,New York,34,49.55,Two year,Credit card (automatic),Yes,Yes,No,No,1635.96,0
+CUST-0203,43,Female,Los Angeles,10,111.5,Month-to-month,Bank transfer (automatic),No internet service,Yes,Yes,Yes,1082.46,0
+CUST-0204,47,Female,Los Angeles,71,85.91,Two year,Electronic check,No internet service,Yes,No internet service,No,6091.33,0
+CUST-0205,37,Male,Chicago,68,65.7,Month-to-month,Mailed check,Yes,Yes,No,Yes,4443.27,0
+CUST-0206,27,Male,Los Angeles,59,43.95,One year,Bank transfer (automatic),No internet service,No,Yes,No,2523.13,0
+CUST-0207,43,Male,Phoenix,30,88.93,One year,Credit card (automatic),No internet service,No internet service,Yes,Yes,2599.07,0
+CUST-0208,74,Male,Houston,8,117.33,Month-to-month,Electronic check,No,No,No internet service,No,1001.82,0
+CUST-0209,74,Female,Houston,27,91.76,One year,Credit card (automatic),No,No,No internet service,No,2474.36,0
+CUST-0210,68,Male,Phoenix,17,65.46,Month-to-month,Electronic check,No internet service,No internet service,Yes,Yes,1164.62,0
+CUST-0211,68,Male,New York,47,112.32,Month-to-month,Bank transfer (automatic),Yes,Yes,No,No internet service,5267.43,0
+CUST-0212,78,Male,Phoenix,49,89.55,One year,Credit card (automatic),Yes,Yes,No,Yes,4397.9,0
+CUST-0213,36,Male,Chicago,45,98.72,One year,Mailed check,No,No,No internet service,No internet service,4413.44,0
+CUST-0214,39,Male,Los Angeles,53,112.42,One year,Mailed check,No,No,No,Yes,5961.2,0
+CUST-0215,76,Female,New York,16,67.08,Month-to-month,Electronic check,No,No,Yes,No internet service,1077.3,1
+CUST-0216,20,Male,Phoenix,1,77.79,Month-to-month,Mailed check,No,No internet service,No internet service,Yes,159.92,0
+CUST-0217,34,Male,Los Angeles,1,94.55,Month-to-month,Bank transfer (automatic),No,No,No,No,118.42,0
+CUST-0218,55,Female,New York,27,90.43,Month-to-month,Electronic check,Yes,Yes,Yes,No,2465.93,1
+CUST-0219,49,Female,Chicago,50,43.13,Two year,Electronic check,No,Yes,Yes,No internet service,2174.5,0
+CUST-0220,46,Female,Los Angeles,54,89.95,Month-to-month,Credit card (automatic),No internet service,No,No,No,4901.71,0
+CUST-0221,50,Male,Chicago,62,48.65,Two year,Electronic check,Yes,Yes,No,No internet service,2971.24,0
+CUST-0222,62,Female,Phoenix,67,88.04,Month-to-month,Bank transfer (automatic),No,Yes,No,Yes,5835.9,0
+CUST-0223,58,Male,Chicago,17,61.0,Month-to-month,Mailed check,No internet service,No internet service,No internet service,No,1030.16,0
+CUST-0224,56,Female,New York,7,74.6,One year,Credit card (automatic),No internet service,No,No internet service,Yes,497.68,0
+CUST-0225,65,Female,Phoenix,31,115.1,Month-to-month,Mailed check,Yes,Yes,No internet service,No,3651.36,0
+CUST-0226,24,Male,New York,50,77.05,Month-to-month,Credit card (automatic),No,No internet service,No,Yes,3803.17,0
+CUST-0227,20,Female,Phoenix,10,30.18,Two year,Electronic check,No internet service,No,Yes,Yes,367.14,0
+CUST-0228,58,Male,Phoenix,45,116.63,Month-to-month,Electronic check,Yes,No,No,Yes,5304.37,1
+CUST-0229,54,Male,Houston,57,76.29,Month-to-month,Bank transfer (automatic),No,Yes,No internet service,No,4277.4,0
+CUST-0230,46,Female,Houston,62,40.56,Month-to-month,Credit card (automatic),No internet service,No,No internet service,No internet service,2547.54,0
+CUST-0231,58,Male,Houston,26,55.59,Month-to-month,Bank transfer (automatic),Yes,No,No internet service,Yes,1431.94,0
+CUST-0232,41,Female,New York,32,104.0,Month-to-month,Electronic check,Yes,Yes,Yes,Yes,3365.03,1
+CUST-0233,35,Female,Houston,47,30.45,Two year,Mailed check,No,Yes,No,Yes,1513.5,0
+CUST-0234,19,Female,Chicago,70,107.33,Two year,Credit card (automatic),No,Yes,No,No,7448.9,1
+CUST-0235,62,Male,New York,30,65.56,Month-to-month,Bank transfer (automatic),No,No,Yes,Yes,1999.66,0
+CUST-0236,20,Female,Los Angeles,70,24.25,Two year,Credit card (automatic),Yes,No internet service,No internet service,No,1711.41,0
+CUST-0237,22,Male,Chicago,44,105.66,Two year,Mailed check,No internet service,Yes,Yes,No internet service,4620.19,0
+CUST-0238,32,Male,Phoenix,69,49.99,One year,Credit card (automatic),No internet service,No,No internet service,No,3442.5,0
+CUST-0239,47,Male,Chicago,21,51.12,Month-to-month,Electronic check,No internet service,No,Yes,Yes,1130.73,0
+CUST-0240,50,Male,Chicago,35,78.85,Month-to-month,Credit card (automatic),Yes,No,Yes,Yes,2749.56,1
+CUST-0241,70,Female,Los Angeles,37,75.37,One year,Credit card (automatic),No,No,Yes,No internet service,2842.24,0
+CUST-0242,45,Male,Los Angeles,35,43.59,One year,Bank transfer (automatic),Yes,No,No internet service,No internet service,1569.6,0
+CUST-0243,46,Male,Los Angeles,11,66.2,Month-to-month,Mailed check,No,Yes,No internet service,No,795.45,0
+CUST-0244,39,Female,Los Angeles,33,103.85,Two year,Bank transfer (automatic),No,No,Yes,No,3498.95,1
+CUST-0245,73,Female,Los Angeles,29,67.58,One year,Electronic check,No,No internet service,Yes,No,1942.72,0
+CUST-0246,22,Male,Phoenix,54,60.52,One year,Credit card (automatic),No,No,Yes,Yes,3309.83,0
+CUST-0247,38,Male,Los Angeles,17,37.49,Month-to-month,Mailed check,No,No internet service,Yes,No,634.81,0
+CUST-0248,58,Female,New York,12,89.76,Two year,Bank transfer (automatic),Yes,No,No,Yes,1090.49,0
+CUST-0249,40,Male,New York,29,51.01,One year,Credit card (automatic),No,No,Yes,No internet service,1510.2,0
+CUST-0250,54,Female,Phoenix,25,48.55,Month-to-month,Credit card (automatic),No,No internet service,No internet service,Yes,1284.37,0
+CUST-0251,19,Female,Los Angeles,43,88.29,One year,Credit card (automatic),Yes,No internet service,No,No,3784.85,0
+CUST-0252,61,Male,Phoenix,34,89.3,One year,Bank transfer (automatic),Yes,Yes,No,Yes,3057.12,0
+CUST-0253,51,Female,Phoenix,72,56.68,Month-to-month,Mailed check,No internet service,No,No,No internet service,4178.18,0
+CUST-0254,20,Male,New York,27,27.04,Month-to-month,Electronic check,No,No,No,No,839.83,0
+CUST-0255,63,Female,Houston,48,119.83,Month-to-month,Credit card (automatic),No,No internet service,No internet service,Yes,5752.18,0
+CUST-0256,67,Male,Los Angeles,22,42.33,One year,Credit card (automatic),No,No,No internet service,No internet service,931.18,0
+CUST-0257,28,Female,New York,47,27.31,One year,Mailed check,No internet service,Yes,No,No,1240.65,0
+CUST-0258,44,Female,Houston,54,38.97,Month-to-month,Mailed check,No internet service,No,No,Yes,2099.99,0
+CUST-0259,44,Male,Houston,25,35.65,One year,Mailed check,No internet service,No,No internet service,No internet service,974.63,0
+CUST-0260,74,Female,Houston,41,83.61,Month-to-month,Bank transfer (automatic),Yes,Yes,No internet service,No,3418.81,1
+CUST-0261,67,Female,Los Angeles,9,27.67,Month-to-month,Credit card (automatic),No,No,Yes,Yes,206.39,0
+CUST-0262,75,Female,Phoenix,41,30.34,Two year,Electronic check,No internet service,No,Yes,No,1239.41,0
+CUST-0263,26,Male,Los Angeles,21,112.03,One year,Bank transfer (automatic),Yes,Yes,No internet service,Yes,2353.95,1
+CUST-0264,66,Female,New York,34,118.62,Month-to-month,Mailed check,No internet service,No,No,Yes,4002.12,0
+CUST-0265,73,Male,Houston,54,71.25,Two year,Mailed check,No,Yes,No,No internet service,3852.05,0
+CUST-0266,28,Female,Los Angeles,7,70.75,Two year,Credit card (automatic),Yes,Yes,No internet service,No,590.06,0
+CUST-0267,28,Male,New York,60,48.62,Month-to-month,Credit card (automatic),No,Yes,No,No internet service,2884.48,0
+CUST-0268,73,Female,Los Angeles,36,22.4,One year,Credit card (automatic),No,No,No,No,808.19,0
+CUST-0269,26,Female,Chicago,57,39.5,Month-to-month,Electronic check,No,No internet service,Yes,Yes,2268.03,0
+CUST-0270,37,Female,Los Angeles,67,89.04,Month-to-month,Electronic check,No internet service,No,Yes,No,5962.11,0
+CUST-0271,44,Male,New York,12,62.23,Two year,Electronic check,No,No,No internet service,No,752.74,0
+CUST-0272,74,Female,New York,30,23.03,One year,Bank transfer (automatic),No,No,No internet service,No internet service,694.77,0
+CUST-0273,52,Male,Houston,22,102.88,Month-to-month,Electronic check,No,No,Yes,No,2260.62,0
+CUST-0274,45,Male,Phoenix,9,36.46,Month-to-month,Mailed check,Yes,No internet service,Yes,Yes,273.04,0
+CUST-0275,31,Female,Phoenix,72,40.82,Month-to-month,Credit card (automatic),No internet service,Yes,No,No,2884.84,0
+CUST-0276,26,Female,Chicago,71,42.04,Month-to-month,Bank transfer (automatic),Yes,No,Yes,No,2960.03,0
+CUST-0277,77,Male,Chicago,3,39.7,Month-to-month,Credit card (automatic),No,Yes,No internet service,No,65.16,0
+CUST-0278,58,Male,Chicago,55,88.88,Month-to-month,Electronic check,Yes,No,Yes,Yes,4892.47,0
+CUST-0279,54,Female,Houston,19,119.79,Month-to-month,Credit card (automatic),No internet service,No,Yes,No,2236.38,0
+CUST-0280,26,Female,New York,19,94.11,Two year,Electronic check,Yes,No internet service,No internet service,No,1845.07,1
+CUST-0281,31,Male,Houston,45,73.39,Month-to-month,Bank transfer (automatic),No internet service,Yes,Yes,Yes,3247.26,0
+CUST-0282,46,Male,Phoenix,7,87.57,Two year,Credit card (automatic),No,Yes,No internet service,No internet service,582.91,1
+CUST-0283,54,Male,New York,23,101.01,One year,Bank transfer (automatic),No,No internet service,No,No,2363.91,1
+CUST-0284,23,Male,Chicago,45,79.83,Two year,Bank transfer (automatic),No,No internet service,No internet service,No,3634.11,0
+CUST-0285,46,Male,Phoenix,10,31.42,Month-to-month,Bank transfer (automatic),No internet service,No,Yes,No internet service,361.17,1
+CUST-0286,45,Male,Chicago,68,86.15,Month-to-month,Credit card (automatic),Yes,Yes,No internet service,No,5919.75,1
+CUST-0287,21,Female,Houston,30,91.04,Month-to-month,Bank transfer (automatic),No internet service,No internet service,No internet service,No,2728.84,0
+CUST-0288,78,Male,Chicago,46,55.55,Month-to-month,Electronic check,No,No internet service,Yes,Yes,2585.79,0
+CUST-0289,78,Female,Chicago,42,70.78,Two year,Credit card (automatic),No internet service,No,No,Yes,2953.43,0
+CUST-0290,51,Female,Los Angeles,12,32.27,One year,Credit card (automatic),No internet service,No,No internet service,No,443.72,0
+CUST-0291,18,Female,Houston,51,66.42,Two year,Mailed check,No,No,No,Yes,3382.27,0
+CUST-0292,46,Female,Chicago,64,40.11,Month-to-month,Credit card (automatic),Yes,Yes,Yes,No internet service,2656.04,0
+CUST-0293,38,Male,Phoenix,29,54.38,One year,Bank transfer (automatic),No internet service,No,Yes,No internet service,1575.29,0
+CUST-0294,25,Male,New York,18,58.65,Month-to-month,Electronic check,No,No,No internet service,Yes,1099.92,1
+CUST-0295,51,Female,Los Angeles,70,115.13,Two year,Electronic check,No,No,Yes,No,8046.06,0
+CUST-0296,67,Female,New York,32,89.02,Month-to-month,Mailed check,Yes,No,No,No internet service,2869.0,1
+CUST-0297,52,Female,Houston,14,39.18,One year,Credit card (automatic),No,No internet service,No,No,569.32,0
+CUST-0298,71,Female,Phoenix,20,79.46,Two year,Electronic check,No,No,No internet service,Yes,1691.32,0
+CUST-0299,62,Female,Los Angeles,19,100.68,Month-to-month,Credit card (automatic),No internet service,Yes,Yes,Yes,1954.58,0
+CUST-0300,79,Female,Houston,8,74.86,Month-to-month,Bank transfer (automatic),Yes,No,No,No internet service,584.3,0
+CUST-0301,23,Male,New York,60,106.64,Month-to-month,Bank transfer (automatic),No,No internet service,No,No,6381.55,0
+CUST-0302,72,Female,Houston,23,98.26,One year,Electronic check,No internet service,Yes,No,No,2224.24,0
+CUST-0303,53,Female,Phoenix,60,88.02,Month-to-month,Credit card (automatic),No internet service,No internet service,Yes,Yes,5271.59,0
+CUST-0304,32,Female,Chicago,15,95.46,Month-to-month,Mailed check,No internet service,Yes,No,Yes,1380.32,0
+CUST-0305,20,Female,Phoenix,25,102.31,Month-to-month,Electronic check,No,No,Yes,No internet service,2504.44,0
+CUST-0306,53,Male,Phoenix,62,24.54,Two year,Credit card (automatic),No,Yes,No internet service,No internet service,1514.54,0
+CUST-0307,31,Female,Chicago,38,66.2,One year,Credit card (automatic),No,No internet service,No internet service,Yes,2593.34,0
+CUST-0308,67,Female,Phoenix,72,99.21,Month-to-month,Bank transfer (automatic),Yes,No,No internet service,Yes,7199.5,0
+CUST-0309,33,Male,New York,59,92.51,Month-to-month,Bank transfer (automatic),No,No,Yes,No internet service,5549.14,0
+CUST-0310,36,Female,Phoenix,13,109.01,Month-to-month,Mailed check,No,No internet service,No,No internet service,1425.48,1
+CUST-0311,27,Female,Chicago,7,99.71,Two year,Mailed check,No internet service,No,No,No,694.82,0
+CUST-0312,19,Female,Phoenix,64,48.09,Month-to-month,Mailed check,No,No,No internet service,Yes,3068.81,0
+CUST-0313,29,Female,Houston,52,23.63,Month-to-month,Credit card (automatic),Yes,No internet service,Yes,No internet service,1278.7,0
+CUST-0314,37,Female,Los Angeles,70,111.04,Month-to-month,Mailed check,Yes,Yes,Yes,No internet service,7857.77,0
+CUST-0315,52,Male,Phoenix,70,80.55,Two year,Mailed check,Yes,No,Yes,Yes,5630.04,0
+CUST-0316,71,Male,Phoenix,71,98.4,Month-to-month,Electronic check,No internet service,No internet service,No,No internet service,6968.11,0
+CUST-0317,68,Male,Houston,67,91.5,One year,Electronic check,No internet service,Yes,No,Yes,6147.46,0
+CUST-0318,50,Male,Los Angeles,1,89.4,Month-to-month,Electronic check,No,No,No internet service,Yes,95.18,0
+CUST-0319,59,Female,Chicago,59,108.28,Month-to-month,Mailed check,No,No,No,Yes,6405.21,0
+CUST-0320,18,Female,New York,58,29.92,Month-to-month,Credit card (automatic),No,Yes,Yes,No internet service,1800.46,0
+CUST-0321,62,Female,Phoenix,58,34.99,Two year,Mailed check,No,No,No,No,1986.74,0
+CUST-0322,27,Male,Los Angeles,10,46.33,One year,Mailed check,No,No,No internet service,Yes,402.36,0
+CUST-0323,28,Female,Los Angeles,56,87.36,Month-to-month,Credit card (automatic),No internet service,No internet service,Yes,No,4965.89,0
+CUST-0324,68,Female,Houston,51,98.88,Month-to-month,Electronic check,No,No,No,No internet service,5142.83,0
+CUST-0325,67,Male,Chicago,44,116.81,Two year,Electronic check,No internet service,No,No,Yes,5155.46,0
+CUST-0326,41,Male,New York,24,84.43,Month-to-month,Electronic check,No,No,Yes,No internet service,2010.05,1
+CUST-0327,33,Male,Chicago,47,85.14,Month-to-month,Credit card (automatic),No internet service,No internet service,Yes,Yes,3992.62,0
+CUST-0328,18,Female,Houston,39,81.46,Month-to-month,Electronic check,No,No internet service,Yes,Yes,3281.17,0
+CUST-0329,34,Female,New York,67,115.45,Two year,Electronic check,No internet service,Yes,Yes,No,7693.97,0
+CUST-0330,37,Female,Los Angeles,47,43.57,One year,Mailed check,No internet service,No,Yes,Yes,2044.95,0
+CUST-0331,59,Female,New York,34,113.04,Month-to-month,Mailed check,No internet service,Yes,No,Yes,3808.18,0
+CUST-0332,50,Male,New York,21,33.0,Month-to-month,Mailed check,No,Yes,Yes,No internet service,698.91,0
+CUST-0333,45,Male,Houston,42,101.99,Two year,Electronic check,No,No,No,Yes,4315.06,1
+CUST-0334,66,Female,New York,54,67.36,Month-to-month,Bank transfer (automatic),Yes,No,Yes,No internet service,3672.35,1
+CUST-0335,78,Male,Chicago,26,89.85,Month-to-month,Electronic check,Yes,Yes,No,No internet service,2351.68,0
+CUST-0336,71,Male,Phoenix,48,49.57,Month-to-month,Credit card (automatic),No internet service,Yes,No internet service,No internet service,2308.28,0
+CUST-0337,68,Male,Houston,46,99.61,One year,Mailed check,No,No,No internet service,Yes,4606.41,0
+CUST-0338,22,Male,New York,5,87.54,Month-to-month,Bank transfer (automatic),No,No,No,Yes,456.62,0
+CUST-0339,73,Female,Houston,29,90.22,Month-to-month,Credit card (automatic),No internet service,Yes,Yes,No,2617.51,0
+CUST-0340,38,Female,Los Angeles,51,87.35,Two year,Electronic check,No,Yes,Yes,No internet service,4371.73,0
+CUST-0341,25,Male,New York,54,94.94,Month-to-month,Bank transfer (automatic),Yes,Yes,Yes,Yes,5134.88,0
+CUST-0342,74,Male,Phoenix,32,75.15,Month-to-month,Electronic check,No,No internet service,No internet service,No,2413.52,1
+CUST-0343,78,Female,Chicago,57,82.11,Month-to-month,Credit card (automatic),No,No,Yes,Yes,4642.79,0
+CUST-0344,57,Female,Phoenix,45,115.15,Month-to-month,Bank transfer (automatic),Yes,Yes,Yes,No,5178.06,0
+CUST-0345,43,Female,Houston,48,44.82,One year,Credit card (automatic),No internet service,Yes,No,No internet service,2148.35,0
+CUST-0346,59,Female,Houston,46,46.66,Two year,Credit card (automatic),No internet service,Yes,Yes,No,2099.27,0
+CUST-0347,30,Male,New York,45,48.38,Two year,Mailed check,Yes,No internet service,No internet service,No,2247.82,0
+CUST-0348,72,Female,Chicago,21,46.9,Month-to-month,Mailed check,No,No,Yes,No,1043.8,0
+CUST-0349,45,Female,Phoenix,20,28.24,Month-to-month,Electronic check,No internet service,No,Yes,Yes,556.06,0
+CUST-0350,42,Male,Phoenix,3,119.44,One year,Bank transfer (automatic),No,No internet service,Yes,Yes,351.32,1
+CUST-0351,29,Male,Phoenix,34,78.47,Month-to-month,Electronic check,Yes,Yes,No internet service,Yes,2612.2,1
+CUST-0352,28,Female,Phoenix,9,72.02,Month-to-month,Electronic check,No,No internet service,No internet service,Yes,679.49,0
+CUST-0353,33,Male,Houston,1,105.22,One year,Mailed check,No,Yes,No,Yes,113.19,0
+CUST-0354,33,Female,New York,50,113.39,Month-to-month,Mailed check,No internet service,No,No,No,5732.64,0
+CUST-0355,39,Female,Los Angeles,5,58.02,Month-to-month,Mailed check,No,No,No,Yes,296.54,0
+CUST-0356,40,Male,Houston,63,49.26,Month-to-month,Bank transfer (automatic),No internet service,No,No internet service,No internet service,3145.59,0
+CUST-0357,74,Female,Los Angeles,53,102.68,Month-to-month,Credit card (automatic),No internet service,Yes,No,Yes,5392.69,1
+CUST-0358,76,Male,New York,56,75.53,Month-to-month,Credit card (automatic),No internet service,Yes,No internet service,Yes,4152.0,0
+CUST-0359,54,Female,Los Angeles,48,36.81,Month-to-month,Mailed check,No internet service,No,No internet service,Yes,1773.72,0
+CUST-0360,41,Male,Phoenix,58,102.14,Month-to-month,Electronic check,No,Yes,No,No internet service,5837.19,0
+CUST-0361,71,Female,New York,8,66.88,Month-to-month,Electronic check,No internet service,No,No internet service,Yes,541.42,1
+CUST-0362,27,Female,Los Angeles,27,94.9,Month-to-month,Electronic check,No internet service,Yes,No internet service,Yes,2534.19,0
+CUST-0363,52,Male,Phoenix,10,20.26,Month-to-month,Mailed check,No,No,No internet service,Yes,207.47,0
+CUST-0364,77,Male,New York,50,90.63,Two year,Bank transfer (automatic),No,No internet service,No internet service,No,4496.25,0
+CUST-0365,43,Female,Los Angeles,12,39.2,Month-to-month,Credit card (automatic),Yes,No,No internet service,Yes,530.81,0
+CUST-0366,74,Male,Phoenix,46,52.61,Month-to-month,Electronic check,No,No,No internet service,Yes,2389.14,0
+CUST-0367,59,Female,New York,37,37.27,Month-to-month,Electronic check,Yes,Yes,Yes,No,1312.98,0
+CUST-0368,27,Male,Phoenix,31,54.07,Month-to-month,Electronic check,Yes,No internet service,No internet service,Yes,1700.01,1
+CUST-0369,52,Male,Phoenix,40,119.19,Month-to-month,Electronic check,No internet service,Yes,No internet service,Yes,4752.54,0
+CUST-0370,21,Male,New York,54,77.0,One year,Mailed check,Yes,Yes,No internet service,No,4088.66,0
+CUST-0371,36,Female,Chicago,17,95.58,Month-to-month,Credit card (automatic),No,Yes,No,No internet service,1625.96,0
+CUST-0372,70,Male,Chicago,56,20.22,Month-to-month,Bank transfer (automatic),Yes,No,Yes,Yes,1214.31,0
+CUST-0373,53,Female,Los Angeles,57,106.66,One year,Mailed check,No,No internet service,No,No internet service,6087.32,0
+CUST-0374,43,Female,Chicago,66,61.44,Two year,Bank transfer (automatic),Yes,No internet service,No internet service,No,4083.56,0
+CUST-0375,42,Male,Houston,45,42.78,Two year,Credit card (automatic),No,No,No internet service,No,1928.63,0
+CUST-0376,50,Female,Chicago,22,55.06,One year,Bank transfer (automatic),Yes,No,No,No internet service,1267.44,0
+CUST-0377,54,Female,Phoenix,28,87.69,Month-to-month,Credit card (automatic),No internet service,Yes,Yes,No internet service,2479.74,0
+CUST-0378,28,Female,Chicago,21,69.74,One year,Mailed check,No internet service,No,No,No,1523.43,0
+CUST-0379,63,Male,Los Angeles,33,96.61,One year,Electronic check,Yes,No internet service,No,No,3162.68,0
+CUST-0380,58,Female,Chicago,57,82.68,Month-to-month,Electronic check,No internet service,Yes,Yes,Yes,4748.53,0
+CUST-0381,24,Male,Los Angeles,3,33.5,Month-to-month,Bank transfer (automatic),No,No,Yes,Yes,137.91,0
+CUST-0382,70,Female,Phoenix,59,73.88,Two year,Credit card (automatic),Yes,Yes,Yes,Yes,4324.15,0
+CUST-0383,47,Male,New York,38,105.11,Month-to-month,Bank transfer (automatic),Yes,Yes,Yes,No internet service,3891.28,0
+CUST-0384,19,Female,Houston,49,105.32,Month-to-month,Bank transfer (automatic),Yes,No,Yes,No,5266.57,1
+CUST-0385,76,Female,Houston,29,23.52,Two year,Mailed check,No,No,No internet service,No internet service,736.49,0
+CUST-0386,20,Female,New York,65,106.68,One year,Credit card (automatic),No internet service,No internet service,Yes,No,6918.21,0
+CUST-0387,64,Male,Houston,45,113.54,Month-to-month,Mailed check,No internet service,No internet service,Yes,No,5126.16,0
+CUST-0388,38,Female,Houston,9,31.77,Month-to-month,Credit card (automatic),No internet service,No internet service,Yes,Yes,282.88,1
+CUST-0389,64,Female,Houston,69,55.39,One year,Credit card (automatic),No internet service,Yes,Yes,No internet service,3823.15,0
+CUST-0390,62,Male,New York,31,93.71,Month-to-month,Bank transfer (automatic),No,No,No internet service,No,2846.66,0
+CUST-0391,35,Male,Phoenix,68,36.54,Month-to-month,Credit card (automatic),No,No internet service,No internet service,No internet service,2463.7,0
+CUST-0392,39,Male,Los Angeles,37,44.92,Month-to-month,Bank transfer (automatic),No,No,Yes,Yes,1606.61,0
+CUST-0393,27,Female,New York,40,101.41,Two year,Mailed check,No,Yes,Yes,Yes,4037.97,0
+CUST-0394,79,Male,Houston,72,76.36,Month-to-month,Credit card (automatic),Yes,No,No internet service,No,5564.61,0
+CUST-0395,53,Male,Phoenix,22,62.64,One year,Bank transfer (automatic),No,Yes,No,No,1382.59,0
+CUST-0396,51,Male,Houston,56,30.53,One year,Electronic check,No,No internet service,Yes,Yes,1710.84,0
+CUST-0397,75,Male,New York,57,40.95,Two year,Mailed check,Yes,No internet service,No,Yes,2317.26,0
+CUST-0398,19,Male,Houston,10,105.29,Month-to-month,Bank transfer (automatic),No internet service,No,No,Yes,1036.41,0
+CUST-0399,34,Male,Phoenix,23,86.51,One year,Electronic check,No,No,No,No internet service,1999.62,1
+CUST-0400,56,Female,New York,71,61.83,Two year,Bank transfer (automatic),No,Yes,Yes,No,4380.73,0
+CUST-0401,45,Male,New York,55,66.56,Month-to-month,Bank transfer (automatic),No internet service,Yes,No,Yes,3624.93,0
+CUST-0402,24,Male,Chicago,51,53.24,Month-to-month,Mailed check,No internet service,Yes,No internet service,No,2677.03,0
+CUST-0403,30,Male,Houston,2,81.24,Month-to-month,Mailed check,Yes,Yes,No,No,181.23,1
+CUST-0404,70,Female,New York,72,116.46,Month-to-month,Electronic check,No,No internet service,No internet service,No,8347.14,0
+CUST-0405,46,Male,Los Angeles,55,52.16,Month-to-month,Credit card (automatic),No,Yes,Yes,No internet service,2931.29,0
+CUST-0406,44,Male,Houston,33,44.92,Month-to-month,Mailed check,Yes,No internet service,No,Yes,1497.31,1
+CUST-0407,22,Male,Phoenix,9,114.12,One year,Credit card (automatic),No internet service,No internet service,No internet service,Yes,1107.48,0
+CUST-0408,47,Female,Chicago,67,39.03,Month-to-month,Credit card (automatic),Yes,No,No,Yes,2610.0,0
+CUST-0409,67,Female,Houston,43,48.76,Month-to-month,Credit card (automatic),No,Yes,No,No internet service,2143.71,1
+CUST-0410,55,Female,New York,72,38.52,Month-to-month,Electronic check,No internet service,No,Yes,No internet service,2749.04,0
+CUST-0411,34,Male,Houston,42,23.93,Month-to-month,Credit card (automatic),No,Yes,No,No internet service,1100.32,1
+CUST-0412,28,Male,New York,46,20.13,Month-to-month,Bank transfer (automatic),No,No,No,No,919.1,0
+CUST-0413,78,Male,New York,42,77.51,Month-to-month,Mailed check,No internet service,Yes,No internet service,No,3289.18,0
+CUST-0414,19,Female,Phoenix,28,74.54,Month-to-month,Credit card (automatic),Yes,No internet service,Yes,No,2013.16,0
+CUST-0415,74,Male,Phoenix,64,94.65,Month-to-month,Bank transfer (automatic),No internet service,No,Yes,No,6082.18,0
+CUST-0416,73,Female,Phoenix,31,81.49,Month-to-month,Credit card (automatic),No,No internet service,No,Yes,2524.16,0
+CUST-0417,48,Female,Houston,1,80.82,Month-to-month,Mailed check,No,Yes,No,No,128.6,0
+CUST-0418,78,Female,Houston,12,28.75,Month-to-month,Credit card (automatic),No internet service,No,Yes,Yes,395.24,1
+CUST-0419,59,Female,Phoenix,46,98.67,One year,Electronic check,No internet service,No,No internet service,Yes,4559.84,0
+CUST-0420,52,Male,Houston,64,102.29,Month-to-month,Bank transfer (automatic),No,No,No,Yes,6622.74,1
+CUST-0421,34,Female,New York,42,70.71,Month-to-month,Electronic check,No,No,No,No internet service,3024.35,0
+CUST-0422,65,Female,Chicago,19,93.17,Month-to-month,Bank transfer (automatic),No internet service,No,Yes,No internet service,1775.92,1
+CUST-0423,60,Female,Chicago,66,94.64,Two year,Mailed check,No,Yes,Yes,No internet service,6178.54,0
+CUST-0424,50,Male,Phoenix,62,29.96,Month-to-month,Bank transfer (automatic),No,Yes,No internet service,No internet service,1879.27,0
+CUST-0425,62,Female,Houston,9,92.07,Month-to-month,Electronic check,No,No,Yes,No internet service,758.24,1
+CUST-0426,37,Female,Chicago,29,108.81,Month-to-month,Mailed check,No,No,No internet service,No,2992.57,0
+CUST-0427,33,Male,Houston,59,30.75,Month-to-month,Mailed check,No,Yes,Yes,Yes,1776.99,0
+CUST-0428,60,Male,Los Angeles,65,44.94,Two year,Electronic check,Yes,No,No internet service,Yes,2876.59,0
+CUST-0429,49,Female,Los Angeles,43,51.91,Two year,Credit card (automatic),No internet service,Yes,No,No,2210.85,0
+CUST-0430,31,Female,New York,9,73.39,One year,Mailed check,No,Yes,No,No internet service,616.11,0
+CUST-0431,67,Female,Houston,53,87.97,One year,Electronic check,No internet service,No,No,No,4687.03,0
+CUST-0432,66,Female,Los Angeles,55,97.51,Month-to-month,Credit card (automatic),No,No internet service,No,No,5353.39,1
+CUST-0433,67,Female,New York,35,50.14,Month-to-month,Mailed check,No internet service,Yes,No internet service,Yes,1731.11,0
+CUST-0434,50,Male,New York,43,116.3,Month-to-month,Credit card (automatic),Yes,Yes,Yes,Yes,5062.57,0
+CUST-0435,36,Male,New York,13,98.59,Month-to-month,Mailed check,No,Yes,No,No internet service,1353.37,0
+CUST-0436,53,Male,Houston,10,109.25,Month-to-month,Electronic check,No internet service,No,Yes,No internet service,1108.01,1
+CUST-0437,38,Male,Los Angeles,18,60.35,Month-to-month,Bank transfer (automatic),No,Yes,No internet service,No internet service,1107.47,0
+CUST-0438,55,Male,New York,37,65.56,One year,Mailed check,No,Yes,No internet service,Yes,2451.66,0
+CUST-0439,29,Female,Phoenix,36,53.71,One year,Electronic check,No,No,Yes,Yes,1976.58,0
+CUST-0440,31,Male,Chicago,7,97.83,Month-to-month,Electronic check,No,Yes,No,No internet service,762.1,0
+CUST-0441,57,Male,Los Angeles,61,110.18,One year,Electronic check,Yes,No internet service,Yes,No,6649.75,0
+CUST-0442,25,Male,Phoenix,12,41.38,Month-to-month,Bank transfer (automatic),Yes,No,No internet service,Yes,507.91,1
+CUST-0443,27,Male,Phoenix,30,82.54,Month-to-month,Credit card (automatic),No internet service,Yes,No internet service,No internet service,2463.78,0
+CUST-0444,48,Female,Houston,64,101.31,Two year,Credit card (automatic),No,No,Yes,No internet service,6517.21,1
+CUST-0445,58,Female,Phoenix,68,51.91,Two year,Electronic check,No internet service,No,Yes,Yes,3587.11,0
+CUST-0446,23,Female,Phoenix,49,22.43,Month-to-month,Electronic check,No internet service,No internet service,Yes,Yes,1086.51,0
+CUST-0447,20,Male,Chicago,17,115.03,Month-to-month,Credit card (automatic),Yes,No internet service,No internet service,No internet service,2065.21,0
+CUST-0448,78,Female,Phoenix,6,31.23,Two year,Mailed check,No internet service,No,No,No,133.06,0
+CUST-0449,18,Female,New York,14,66.17,One year,Electronic check,No,Yes,No internet service,Yes,1040.09,0
+CUST-0450,45,Male,Phoenix,7,61.66,One year,Credit card (automatic),Yes,No internet service,No,Yes,396.78,0
+CUST-0451,68,Female,Houston,37,46.16,Month-to-month,Bank transfer (automatic),No,No internet service,No internet service,No,1686.8,1
+CUST-0452,18,Female,Chicago,45,46.56,Month-to-month,Bank transfer (automatic),No internet service,No,No,Yes,2081.39,0
+CUST-0453,35,Male,Phoenix,45,26.3,Two year,Mailed check,Yes,No internet service,Yes,No,1215.21,0
+CUST-0454,42,Female,Houston,34,34.97,Month-to-month,Credit card (automatic),Yes,Yes,No,No,1177.41,0
+CUST-0455,79,Female,New York,65,113.49,One year,Credit card (automatic),No internet service,No internet service,No internet service,No internet service,7292.71,0
+CUST-0456,63,Male,Phoenix,42,45.01,Month-to-month,Electronic check,Yes,Yes,Yes,No internet service,1900.08,0
+CUST-0457,42,Male,New York,40,64.97,One year,Electronic check,Yes,No internet service,Yes,Yes,2512.86,1
+CUST-0458,32,Male,Chicago,67,30.22,Month-to-month,Credit card (automatic),No,Yes,No internet service,No internet service,1958.83,0
+CUST-0459,68,Male,Chicago,59,39.46,Month-to-month,Mailed check,Yes,Yes,No,Yes,2323.1,1
+CUST-0460,26,Female,New York,27,119.22,Month-to-month,Mailed check,No,No,No,Yes,3241.36,0
+CUST-0461,54,Male,Chicago,1,116.53,Month-to-month,Electronic check,No internet service,Yes,No internet service,No internet service,81.4,0
+CUST-0462,59,Male,Los Angeles,67,83.82,One year,Credit card (automatic),No,No,Yes,Yes,5605.13,0
+CUST-0463,64,Female,Phoenix,42,83.23,One year,Bank transfer (automatic),No,Yes,No,Yes,3429.02,0
+CUST-0464,24,Female,Los Angeles,70,95.3,Two year,Mailed check,Yes,No internet service,Yes,No internet service,6680.07,0
+CUST-0465,29,Male,Los Angeles,16,91.19,Month-to-month,Credit card (automatic),Yes,No,Yes,No,1453.73,0
+CUST-0466,77,Male,Los Angeles,9,23.91,Month-to-month,Bank transfer (automatic),No,No internet service,No internet service,Yes,221.56,0
+CUST-0467,53,Female,New York,6,83.14,Month-to-month,Credit card (automatic),No,No internet service,No internet service,Yes,510.51,0
+CUST-0468,43,Female,Houston,49,111.84,Two year,Mailed check,Yes,Yes,No internet service,Yes,5448.31,0
+CUST-0469,63,Female,New York,51,31.82,One year,Electronic check,No,No,No internet service,No internet service,1465.9,0
+CUST-0470,50,Female,Phoenix,5,100.81,One year,Electronic check,No,Yes,Yes,No internet service,613.61,0
+CUST-0471,71,Male,New York,36,76.77,Month-to-month,Mailed check,No,No,No internet service,Yes,2736.3,1
+CUST-0472,49,Female,New York,29,46.35,Month-to-month,Mailed check,No,Yes,Yes,No internet service,1373.45,0
+CUST-0473,35,Female,Los Angeles,35,31.03,One year,Electronic check,No internet service,Yes,No,No,1104.52,0
+CUST-0474,78,Male,Phoenix,5,84.12,One year,Electronic check,Yes,Yes,Yes,Yes,479.58,0
+CUST-0475,30,Male,New York,7,104.89,Month-to-month,Bank transfer (automatic),No internet service,No,No internet service,Yes,598.59,1
+CUST-0476,47,Male,New York,56,103.18,One year,Electronic check,No,Yes,No,Yes,5834.29,0
+CUST-0477,74,Female,Los Angeles,64,101.9,Month-to-month,Electronic check,No,No,Yes,Yes,6562.71,0
+CUST-0478,32,Female,Chicago,67,27.19,Two year,Credit card (automatic),No,Yes,No internet service,No internet service,1723.81,0
+CUST-0479,65,Male,Phoenix,15,70.44,One year,Electronic check,Yes,No,No internet service,No internet service,1031.28,0
+CUST-0480,78,Female,Chicago,13,68.7,Month-to-month,Mailed check,No,Yes,No,Yes,842.83,0
+CUST-0481,77,Male,Los Angeles,48,37.45,One year,Bank transfer (automatic),Yes,No internet service,No internet service,Yes,1846.36,0
+CUST-0482,32,Female,Phoenix,15,53.75,Month-to-month,Credit card (automatic),No internet service,Yes,No,No,868.47,0
+CUST-0483,50,Female,Chicago,32,73.29,One year,Electronic check,No,No internet service,Yes,Yes,2260.62,0
+CUST-0484,67,Female,Los Angeles,68,89.62,Month-to-month,Credit card (automatic),Yes,No,No,Yes,6143.26,0
+CUST-0485,50,Female,Phoenix,41,108.44,Two year,Mailed check,No,No,No,Yes,4408.21,0
+CUST-0486,59,Male,Chicago,60,27.38,Month-to-month,Credit card (automatic),No,No,Yes,Yes,1669.19,1
+CUST-0487,46,Female,Los Angeles,4,22.82,Month-to-month,Electronic check,No,No,Yes,Yes,172.8,0
+CUST-0488,59,Female,Chicago,49,59.71,Month-to-month,Electronic check,Yes,No,No,No,2972.9,0
+CUST-0489,53,Female,Los Angeles,10,20.42,Month-to-month,Electronic check,No,No,Yes,No internet service,263.43,0
+CUST-0490,42,Male,New York,22,50.21,Month-to-month,Electronic check,No internet service,No,No internet service,Yes,1142.35,1
+CUST-0491,74,Male,Houston,20,52.23,Two year,Credit card (automatic),No internet service,No internet service,No,Yes,1019.24,0
+CUST-0492,62,Female,Houston,25,80.77,Month-to-month,Bank transfer (automatic),No internet service,Yes,Yes,No,2034.85,0
+CUST-0493,26,Female,Houston,71,108.62,Two year,Credit card (automatic),Yes,No,Yes,No,7669.47,0
+CUST-0494,79,Female,Los Angeles,9,67.39,One year,Bank transfer (automatic),Yes,No,No,Yes,689.37,0
+CUST-0495,53,Male,Los Angeles,38,56.35,Two year,Bank transfer (automatic),Yes,No internet service,No,No,2132.28,0
+CUST-0496,63,Male,New York,51,83.71,One year,Electronic check,No,No internet service,No internet service,No internet service,4271.34,0
+CUST-0497,77,Male,Houston,52,104.77,One year,Bank transfer (automatic),No,No,Yes,No internet service,5427.02,0
+CUST-0498,46,Female,Chicago,44,88.56,Month-to-month,Mailed check,No,No,No,Yes,3857.35,1
+CUST-0499,21,Male,Chicago,20,45.88,Two year,Credit card (automatic),No internet service,No internet service,No,No,853.5,0
+CUST-0500,71,Male,Houston,59,29.84,Two year,Mailed check,No internet service,Yes,No internet service,No,1770.32,0
+CUST-0501,67,Male,Los Angeles,25,39.27,Month-to-month,Bank transfer (automatic),Yes,No internet service,Yes,No,984.72,0
+CUST-0502,59,Female,Chicago,26,113.73,One year,Credit card (automatic),No,No,Yes,No,2943.26,0
+CUST-0503,72,Female,Chicago,65,75.95,Month-to-month,Bank transfer (automatic),Yes,No,Yes,No,4962.63,1
+CUST-0504,24,Male,Phoenix,2,105.44,Month-to-month,Electronic check,No,Yes,Yes,Yes,286.97,0
+CUST-0505,72,Female,Chicago,67,38.42,Month-to-month,Electronic check,No,No,Yes,Yes,2455.87,1
+CUST-0506,43,Female,Phoenix,42,30.36,Month-to-month,Credit card (automatic),No internet service,No,No internet service,No internet service,1284.63,0
+CUST-0507,55,Male,Los Angeles,45,33.86,Month-to-month,Electronic check,No internet service,Yes,No internet service,No,1533.23,0
+CUST-0508,75,Female,Chicago,68,69.64,One year,Credit card (automatic),Yes,No,Yes,No,4761.11,0
+CUST-0509,73,Female,Chicago,51,107.58,Two year,Bank transfer (automatic),No,No,No internet service,No internet service,5513.73,0
+CUST-0510,47,Female,Chicago,14,92.68,Month-to-month,Electronic check,No,No internet service,No internet service,No,1269.19,0
+CUST-0511,76,Male,Los Angeles,44,32.92,Two year,Mailed check,No internet service,No,No,No internet service,1428.73,0
+CUST-0512,68,Male,Los Angeles,33,78.85,One year,Credit card (automatic),Yes,No,No internet service,No,2602.26,1
+CUST-0513,24,Female,Los Angeles,56,73.89,Two year,Electronic check,No internet service,No,No internet service,Yes,4071.12,0
+CUST-0514,41,Female,Chicago,49,25.76,Month-to-month,Credit card (automatic),No,No,Yes,No,1260.48,0
+CUST-0515,42,Male,New York,12,93.85,Two year,Bank transfer (automatic),No,Yes,Yes,No,1081.08,1
+CUST-0516,35,Female,Phoenix,9,48.2,Two year,Electronic check,No,No,No internet service,No internet service,443.25,0
+CUST-0517,68,Female,New York,40,116.45,Month-to-month,Bank transfer (automatic),No,Yes,Yes,No,4568.43,0
+CUST-0518,35,Male,Phoenix,8,100.83,Two year,Credit card (automatic),No,No,No internet service,No internet service,775.9,0
+CUST-0519,45,Female,Houston,42,21.77,Month-to-month,Mailed check,No,No,No internet service,Yes,879.95,0
+CUST-0520,37,Male,Los Angeles,24,78.05,Month-to-month,Mailed check,No,Yes,Yes,Yes,1935.75,0
+CUST-0521,44,Male,Houston,5,47.89,One year,Mailed check,Yes,Yes,No,No internet service,251.84,0
+CUST-0522,51,Male,New York,15,104.47,Two year,Electronic check,Yes,No internet service,No,No,1536.81,0
+CUST-0523,51,Male,Phoenix,25,38.72,Month-to-month,Credit card (automatic),No,Yes,No,No,879.38,0
+CUST-0524,79,Female,Houston,31,74.69,Two year,Bank transfer (automatic),No,No,No internet service,Yes,2394.48,0
+CUST-0525,74,Male,Los Angeles,56,119.42,Month-to-month,Credit card (automatic),No,No,Yes,No internet service,6739.11,0
+CUST-0526,22,Male,Los Angeles,1,98.75,Month-to-month,Electronic check,No internet service,No internet service,No,No internet service,115.71,0
+CUST-0527,27,Male,Phoenix,34,38.31,Month-to-month,Electronic check,Yes,No internet service,No,No,1329.35,0
+CUST-0528,35,Male,New York,6,99.22,Month-to-month,Bank transfer (automatic),No internet service,Yes,No,Yes,514.11,0
+CUST-0529,62,Male,Houston,34,44.12,One year,Mailed check,No internet service,No internet service,No,Yes,1451.47,0
+CUST-0530,68,Female,Phoenix,66,119.85,Month-to-month,Bank transfer (automatic),No,No,No,Yes,7931.58,0
+CUST-0531,35,Female,Phoenix,39,39.1,Month-to-month,Electronic check,No,Yes,Yes,No,1424.89,0
+CUST-0532,67,Female,Los Angeles,21,29.49,Month-to-month,Electronic check,Yes,No internet service,No,Yes,639.38,0
+CUST-0533,71,Male,Phoenix,8,70.99,One year,Mailed check,No internet service,No,No internet service,Yes,570.44,0
+CUST-0534,63,Male,Phoenix,39,119.27,One year,Electronic check,No internet service,No,Yes,Yes,4581.52,1
+CUST-0535,44,Male,New York,26,80.14,One year,Credit card (automatic),Yes,No,Yes,Yes,2187.62,0
+CUST-0536,72,Female,Chicago,16,77.03,Month-to-month,Mailed check,No internet service,No internet service,No,No,1169.91,1
+CUST-0537,35,Female,Los Angeles,52,71.37,Two year,Bank transfer (automatic),No,No,Yes,Yes,3714.92,0
+CUST-0538,69,Female,Phoenix,4,25.63,Month-to-month,Electronic check,No internet service,Yes,Yes,No internet service,140.3,0
+CUST-0539,23,Male,New York,42,51.23,One year,Credit card (automatic),Yes,Yes,Yes,No,2220.73,0
+CUST-0540,70,Female,Houston,59,98.82,Month-to-month,Bank transfer (automatic),No,No,Yes,No,5909.81,0
+CUST-0541,31,Female,Phoenix,30,83.37,Two year,Bank transfer (automatic),No,No,No internet service,No,2456.04,1
+CUST-0542,58,Male,Chicago,54,55.57,One year,Electronic check,Yes,No,Yes,No,2942.51,0
+CUST-0543,75,Female,Los Angeles,39,79.14,Month-to-month,Mailed check,Yes,Yes,No internet service,No,3058.58,0
+CUST-0544,50,Male,New York,37,49.5,Month-to-month,Credit card (automatic),No internet service,Yes,No,Yes,1885.53,0
+CUST-0545,58,Male,Los Angeles,21,116.91,Month-to-month,Bank transfer (automatic),No,No,No,No,2425.38,0
+CUST-0546,40,Male,Phoenix,69,76.94,One year,Electronic check,No,No,Yes,No internet service,5299.96,0
+CUST-0547,34,Female,Phoenix,7,79.58,One year,Bank transfer (automatic),No,No,No,Yes,485.02,0
+CUST-0548,39,Male,Los Angeles,57,50.39,One year,Bank transfer (automatic),No internet service,No internet service,No,No internet service,2984.41,0
+CUST-0549,54,Male,Chicago,51,90.15,One year,Credit card (automatic),No,No internet service,No,No,4626.16,1
+CUST-0550,24,Male,New York,37,86.19,Month-to-month,Bank transfer (automatic),Yes,Yes,Yes,No,3129.18,1
+CUST-0551,57,Male,Houston,67,103.54,Two year,Credit card (automatic),No,No,Yes,No,6874.24,0
+CUST-0552,23,Female,Chicago,50,97.65,Month-to-month,Bank transfer (automatic),No,No internet service,No internet service,Yes,4857.15,0
+CUST-0553,63,Female,Los Angeles,48,89.69,One year,Bank transfer (automatic),No internet service,No internet service,Yes,Yes,4242.65,0
+CUST-0554,76,Female,Los Angeles,24,35.09,Two year,Credit card (automatic),No,Yes,Yes,No,886.96,0
+CUST-0555,26,Female,Los Angeles,66,93.02,Month-to-month,Electronic check,No,No,Yes,No,6079.19,1
+CUST-0556,78,Male,Houston,44,22.97,Two year,Mailed check,No internet service,No internet service,Yes,No internet service,1031.14,0
+CUST-0557,31,Female,New York,64,24.03,Month-to-month,Bank transfer (automatic),No internet service,No internet service,No,No,1563.49,0
+CUST-0558,24,Female,Houston,43,25.24,Month-to-month,Mailed check,No internet service,Yes,Yes,No,1055.71,0
+CUST-0559,71,Male,Houston,22,85.18,Month-to-month,Mailed check,Yes,Yes,Yes,No internet service,1872.87,0
+CUST-0560,33,Male,New York,39,31.62,One year,Bank transfer (automatic),No,No,No,Yes,1315.39,0
+CUST-0561,25,Male,New York,48,83.7,Two year,Credit card (automatic),No,No internet service,No internet service,No,4006.21,0
+CUST-0562,60,Male,Los Angeles,66,33.51,Two year,Electronic check,No internet service,No,No internet service,No internet service,2146.04,0
+CUST-0563,58,Male,Houston,69,81.38,Month-to-month,Credit card (automatic),No internet service,No internet service,No internet service,Yes,5609.25,1
+CUST-0564,30,Female,Houston,34,54.85,Month-to-month,Bank transfer (automatic),No,No,Yes,No internet service,1852.54,1
+CUST-0565,34,Female,Houston,48,102.53,One year,Mailed check,Yes,No,Yes,No,4932.67,1
+CUST-0566,70,Female,Houston,5,20.64,One year,Credit card (automatic),Yes,No internet service,Yes,No,116.25,0
+CUST-0567,66,Male,Phoenix,55,71.87,Month-to-month,Electronic check,Yes,No internet service,No internet service,No,4002.86,0
+CUST-0568,29,Male,Houston,12,83.48,Two year,Credit card (automatic),Yes,No,No internet service,No,1076.29,0
+CUST-0569,50,Male,Phoenix,16,41.31,Month-to-month,Credit card (automatic),No,No,No internet service,No,635.02,1
+CUST-0570,60,Male,Houston,16,97.61,Month-to-month,Electronic check,No,Yes,No,No,1634.5,0
+CUST-0571,20,Female,Los Angeles,29,35.59,Month-to-month,Bank transfer (automatic),No,No,Yes,No,1013.32,0
+CUST-0572,69,Male,Phoenix,18,87.54,Month-to-month,Mailed check,No internet service,No,No internet service,No internet service,1518.05,1
+CUST-0573,48,Female,Los Angeles,19,107.63,Month-to-month,Electronic check,No,No internet service,No internet service,No,1934.86,0
+CUST-0574,64,Female,Houston,62,66.77,Two year,Mailed check,Yes,Yes,No internet service,No,4213.94,0
+CUST-0575,20,Male,Houston,28,42.38,Month-to-month,Mailed check,No internet service,Yes,No internet service,No,1195.23,0
+CUST-0576,41,Female,New York,57,74.68,Month-to-month,Credit card (automatic),No internet service,No internet service,Yes,No internet service,4325.05,0
+CUST-0577,50,Female,Houston,29,113.67,One year,Mailed check,No,No internet service,Yes,Yes,3256.56,0
+CUST-0578,28,Male,Chicago,7,20.54,Two year,Credit card (automatic),No,No,No internet service,No,133.17,0
+CUST-0579,79,Male,Chicago,60,25.4,One year,Electronic check,No internet service,No internet service,Yes,No internet service,1529.47,0
+CUST-0580,60,Female,Chicago,62,90.45,Month-to-month,Mailed check,Yes,Yes,Yes,Yes,5563.29,0
+CUST-0581,32,Male,New York,10,39.5,Two year,Mailed check,No,No,No internet service,Yes,405.93,0
+CUST-0582,23,Female,Phoenix,72,106.2,One year,Mailed check,No,No,Yes,No internet service,7649.65,0
+CUST-0583,25,Female,Phoenix,1,98.2,One year,Mailed check,No internet service,No internet service,No,No,155.03,0
+CUST-0584,75,Male,Los Angeles,2,39.71,Month-to-month,Credit card (automatic),Yes,No,Yes,No internet service,78.45,0
+CUST-0585,78,Male,Chicago,9,50.08,One year,Bank transfer (automatic),No internet service,No internet service,Yes,No internet service,417.71,1
+CUST-0586,73,Male,Los Angeles,30,50.92,Two year,Mailed check,No internet service,Yes,No,No,1557.15,0
+CUST-0587,20,Male,Houston,62,114.4,Two year,Credit card (automatic),No,No internet service,Yes,No internet service,7107.48,0
+CUST-0588,38,Female,Phoenix,39,76.7,Two year,Credit card (automatic),Yes,Yes,Yes,No,2936.7,1
+CUST-0589,60,Male,Los Angeles,30,113.67,Month-to-month,Electronic check,No,Yes,Yes,No internet service,3419.02,0
+CUST-0590,24,Female,New York,26,65.69,Month-to-month,Mailed check,Yes,No,No,Yes,1676.71,0
+CUST-0591,45,Male,New York,33,59.19,Month-to-month,Bank transfer (automatic),No,No,No,Yes,2004.84,0
+CUST-0592,53,Female,Houston,54,109.7,One year,Electronic check,Yes,Yes,Yes,Yes,5903.58,0
+CUST-0593,54,Male,New York,3,84.21,One year,Credit card (automatic),No internet service,No internet service,No,No,252.32,0
+CUST-0594,25,Male,New York,33,79.99,Month-to-month,Credit card (automatic),No internet service,Yes,Yes,No,2696.45,1
+CUST-0595,28,Male,Houston,52,46.05,Month-to-month,Bank transfer (automatic),No internet service,No,No,Yes,2383.53,1
+CUST-0596,60,Female,Los Angeles,8,70.25,Month-to-month,Credit card (automatic),No internet service,No internet service,Yes,No internet service,540.1,1
+CUST-0597,51,Female,Los Angeles,33,97.23,Two year,Bank transfer (automatic),No internet service,No internet service,No internet service,No,3148.38,0
+CUST-0598,77,Male,Los Angeles,59,37.4,Two year,Electronic check,Yes,Yes,Yes,No,2221.74,0
+CUST-0599,41,Male,Houston,72,20.1,Month-to-month,Electronic check,No internet service,Yes,No internet service,No internet service,1391.98,0
+CUST-0600,71,Female,Phoenix,70,110.46,Two year,Mailed check,No,No,No internet service,No,7739.49,0
+CUST-0601,58,Male,Phoenix,38,54.38,Month-to-month,Electronic check,Yes,No internet service,No internet service,No,2088.36,0
+CUST-0602,26,Female,New York,21,107.55,Two year,Electronic check,Yes,No internet service,No internet service,No internet service,2289.37,0
+CUST-0603,27,Female,Phoenix,21,58.13,Month-to-month,Mailed check,No,No internet service,No,No,1273.36,1
+CUST-0604,62,Female,Phoenix,46,75.94,Two year,Credit card (automatic),No internet service,No,No internet service,Yes,3510.03,0
+CUST-0605,49,Male,Phoenix,43,119.43,Month-to-month,Electronic check,No,No,Yes,Yes,5134.24,0
+CUST-0606,18,Female,Chicago,4,85.1,Month-to-month,Electronic check,Yes,Yes,Yes,Yes,359.87,0
+CUST-0607,50,Female,Los Angeles,8,56.82,One year,Electronic check,No,No,No internet service,No internet service,356.32,0
+CUST-0608,54,Male,Chicago,12,64.41,Month-to-month,Credit card (automatic),Yes,No internet service,No internet service,No,717.11,1
+CUST-0609,71,Female,Houston,18,76.98,Month-to-month,Bank transfer (automatic),No,No internet service,Yes,No internet service,1353.93,0
+CUST-0610,67,Female,New York,16,40.65,One year,Credit card (automatic),No,Yes,No internet service,No,650.34,0
+CUST-0611,66,Male,New York,62,62.52,Month-to-month,Credit card (automatic),Yes,Yes,Yes,No,3882.33,0
+CUST-0612,69,Female,Los Angeles,24,53.28,One year,Mailed check,Yes,Yes,No,No internet service,1310.3,0
+CUST-0613,56,Female,Houston,68,55.36,One year,Bank transfer (automatic),No,No,Yes,No internet service,3782.51,0
+CUST-0614,40,Female,New York,3,31.15,Month-to-month,Electronic check,No,No,No internet service,No,93.1,0
+CUST-0615,33,Male,Los Angeles,55,61.23,One year,Mailed check,Yes,No,No internet service,No internet service,3375.87,0
+CUST-0616,35,Male,Los Angeles,41,33.24,Month-to-month,Electronic check,Yes,Yes,No,No internet service,1277.18,0
+CUST-0617,23,Female,New York,13,101.91,Month-to-month,Mailed check,Yes,No,Yes,Yes,1358.15,0
+CUST-0618,42,Male,Chicago,61,80.98,Two year,Credit card (automatic),Yes,Yes,No internet service,No,4962.33,0
+CUST-0619,41,Male,Phoenix,71,40.08,One year,Mailed check,Yes,No,No,Yes,2845.71,0
+CUST-0620,70,Female,Chicago,29,43.29,One year,Electronic check,No internet service,No internet service,No internet service,No internet service,1205.65,0
+CUST-0621,46,Female,Chicago,47,51.58,Two year,Electronic check,No,Yes,No,Yes,2352.06,0
+CUST-0622,19,Male,Houston,39,101.06,Month-to-month,Credit card (automatic),No,Yes,Yes,No,3896.68,0
+CUST-0623,75,Male,Los Angeles,65,45.76,One year,Electronic check,No,Yes,Yes,No internet service,2976.19,1
+CUST-0624,79,Male,Phoenix,34,106.89,Month-to-month,Electronic check,No,Yes,No,Yes,3571.69,0
+CUST-0625,27,Male,Chicago,19,51.56,One year,Electronic check,No,No internet service,No,No,913.74,1
+CUST-0626,78,Female,Houston,6,57.6,Month-to-month,Mailed check,Yes,No,No,No,234.56,0
+CUST-0627,38,Female,Houston,36,64.81,One year,Bank transfer (automatic),No internet service,No internet service,Yes,No,2288.54,0
+CUST-0628,37,Male,Houston,66,41.78,Month-to-month,Credit card (automatic),No,No internet service,No internet service,Yes,2807.7,0
+CUST-0629,71,Male,Los Angeles,41,26.91,One year,Electronic check,Yes,No internet service,Yes,No,1202.91,0
+CUST-0630,70,Female,New York,32,71.56,One year,Bank transfer (automatic),No,No,No internet service,No internet service,2166.77,0
+CUST-0631,19,Female,Chicago,51,77.88,One year,Credit card (automatic),Yes,No internet service,No,Yes,3899.85,0
+CUST-0632,51,Male,Houston,43,34.18,Month-to-month,Electronic check,No,No,Yes,No internet service,1496.52,0
+CUST-0633,31,Male,Phoenix,39,55.29,Month-to-month,Bank transfer (automatic),No internet service,No internet service,No internet service,Yes,2175.67,0
+CUST-0634,72,Female,Chicago,40,30.76,One year,Electronic check,No,No,No internet service,Yes,1225.58,0
+CUST-0635,43,Female,Phoenix,39,43.05,One year,Credit card (automatic),No internet service,No,No,Yes,1611.42,0
+CUST-0636,33,Male,Chicago,28,96.91,Month-to-month,Credit card (automatic),No,No,No internet service,No,2641.21,0
+CUST-0637,30,Male,New York,20,42.81,Month-to-month,Bank transfer (automatic),No internet service,No internet service,Yes,No,920.91,0
+CUST-0638,47,Male,Phoenix,16,41.88,Two year,Electronic check,No internet service,Yes,No internet service,Yes,654.69,0
+CUST-0639,26,Male,Phoenix,60,71.76,One year,Electronic check,No internet service,No,No internet service,No,4283.37,0
+CUST-0640,56,Male,Phoenix,7,114.05,Two year,Credit card (automatic),Yes,Yes,Yes,No internet service,766.34,0
+CUST-0641,45,Male,New York,8,23.68,Month-to-month,Credit card (automatic),No,No,Yes,Yes,159.18,0
+CUST-0642,54,Male,Phoenix,10,61.74,Two year,Bank transfer (automatic),No,Yes,No internet service,No internet service,618.85,1
+CUST-0643,27,Male,New York,17,42.22,Month-to-month,Mailed check,No,No,Yes,No internet service,773.58,1
+CUST-0644,32,Male,Los Angeles,65,84.71,Month-to-month,Mailed check,No internet service,No internet service,No internet service,No,5501.93,0
+CUST-0645,62,Male,New York,35,109.79,Month-to-month,Credit card (automatic),Yes,No internet service,Yes,Yes,3909.01,0
+CUST-0646,45,Female,Chicago,23,49.2,Month-to-month,Bank transfer (automatic),Yes,No,No internet service,Yes,1104.51,1
+CUST-0647,71,Female,Los Angeles,58,44.74,One year,Mailed check,No internet service,Yes,No internet service,No internet service,2622.72,0
+CUST-0648,50,Female,Houston,36,71.53,Month-to-month,Electronic check,Yes,Yes,Yes,Yes,2531.91,1
+CUST-0649,18,Female,Houston,35,37.73,Month-to-month,Bank transfer (automatic),No internet service,No,No,No internet service,1350.79,1
+CUST-0650,62,Female,Chicago,65,89.98,One year,Bank transfer (automatic),Yes,No internet service,No,No,5842.43,0
