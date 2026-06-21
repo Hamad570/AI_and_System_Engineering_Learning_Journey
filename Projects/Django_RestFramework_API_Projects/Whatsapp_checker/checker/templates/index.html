@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Number Checker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+            border-top: 5px solid #25D366; /* WhatsApp Green */
+        }
+        h2 {
+            color: #075E54;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+            text-align: center;
+        }
+        input[type="text"]:focus {
+            border-color: #25D366;
+        }
+        button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #128C7E;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        .available {
+            color: #128C7E;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+        .not-available {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>WhatsApp Status Checker</h2>
+    <div class="search-box">
+        <input type="text" id="phoneNumber" placeholder="Enter number with country code (e.g. 923001234567)">
+        <button onclick="checkNumber()">Check Status</button>
+    </div>
+    <div id="result"></div>
+</div>
+
+<script>
+function checkNumber() {
+    const number = document.getElementById('phoneNumber').value;
+    const resultDiv = document.getElementById('result');
+    
+    if(!number) {
+        alert("Please enter a number first!");
+        return;
+    }
+
+    // Loader style dynamic effect
+    resultDiv.style.display = "block";
+    resultDiv.className = "";
+    resultDiv.style.color = "#555";
+    resultDiv.style.backgroundColor = "#eee";
+    resultDiv.innerHTML = "Checking...";
+
+    // Django REST Framework API Call
+    fetch('/api/check-number/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}' // Django CSRF protection bypass/handling
+        },
+        body: JSON.stringify({ phone_number: number })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.status === "success") {
+            if(data.is_available) {
+                resultDiv.className = "available";
+                resultDiv.innerHTML = "Available on WhatsApp";
+            } else {
+                resultDiv.className = "not-available";
+                resultDiv.innerHTML = "Not Available on WhatsApp";
+            }
+        } else {
+            resultDiv.className = "not-available";
+            resultDiv.innerHTML = data.error || "Error checking number.";
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        resultDiv.className = "not-available";
+        resultDiv.innerHTML = "Server Connection Error.";
+    });
+}
+</script>
+
+</body>
+</html>

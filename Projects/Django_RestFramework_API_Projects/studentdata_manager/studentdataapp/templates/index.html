@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Management System</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="container mx-auto p-6 max-w-6xl">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-gray-800">Student Data Dashboard</h1>
+            <p class="text-gray-600">Manage student records effortlessly</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md md:col-span-1 h-fit">
+                <h2 id="formTitle" class="text-xl font-semibold mb-4 text-gray-7xl">Add New Student</h2>
+                <form id="studentForm" class="space-y-4">
+                    <input type="hidden" id="studentId">
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Age</label>
+                        <input type="text" id="age" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Student ID (S_ID)</label>
+                        <input type="text" id="s_id" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">CGPA</label>
+                        <input type="text" id="cgpa" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Semester</label>
+                        <input type="text" id="semester" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500">
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 font-semibold transition">Save Student</button>
+                    <button type="button" id="cancelBtn" onclick="resetForm()" class="w-full bg-gray-400 text-white p-2 rounded-md hover:bg-gray-500 font-semibold transition hidden">Cancel Edit</button>
+                </form>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md md:col-span-2">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-4">
+                    <h2 class="text-xl font-semibold text-gray-7xl">Student Records</h2>
+                    <div class="relative w-full sm:w-64">
+                        <input type="text" id="searchBar" onkeyup="searchStudents()" placeholder="Search by Name or S_ID..." class="w-full p-2 pl-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm">
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">S_ID</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Age</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Semester</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CGPA</th>
+                                <th class="px-4 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody" class="bg-white divide-y divide-gray-200">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const apiBaseUrl = '/api/students/';
+        let allStudents = []; 
+
+        // Fetch students list
+        async function fetchStudents() {
+            try {
+                const response = await fetch(apiBaseUrl);
+                allStudents = await response.json();
+                renderTable(allStudents); // Separate function to display rows
+            } catch (error) {
+                console.error('Error fetching students:', error);
+            }
+        }
+
+        // Render Table Rows
+        function renderTable(data) {
+            const tbody = document.getElementById('studentTableBody');
+            tbody.innerHTML = '';
+
+            if (data.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="px-4 py-4 text-center text-gray-500 text-sm">No records found</td></tr>`;
+                return;
+            }
+
+            data.forEach(student => {
+                tbody.innerHTML += `
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900">${student.s_id}</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">${student.name}</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">${student.age}</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">${student.semester}</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-500">${student.cgpa}</td>
+                        <td class="px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                            <button onclick="editStudent(${student.id})" class="text-blue-600 hover:text-blue-900 font-semibold mr-3 cursor-pointer">Edit</button>
+                            <button onclick="deleteStudent(${student.id})" class="text-red-600 hover:text-red-900 font-semibold cursor-pointer">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        // Live Search Function
+        function searchStudents() {
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            
+            // Filter array based on name or s_id matching the search query
+            const filteredStudents = allStudents.filter(student => {
+                return student.name.toLowerCase().includes(query) || 
+                       student.s_id.toLowerCase().includes(query);
+            });
+
+            renderTable(filteredStudents); // Update table with filtered results
+        }
+
+        // Form Submit Handler (Create and Update)
+        document.getElementById('studentForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const id = document.getElementById('studentId').value;
+            const data = {
+                name: document.getElementById('name').value,
+                age: document.getElementById('age').value,
+                s_id: document.getElementById('s_id').value,
+                cgpa: document.getElementById('cgpa').value,
+                semester: document.getElementById('semester').value
+            };
+
+            if (id) {
+                try {
+                    const response = await fetch(`${apiBaseUrl}${id}/`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    if (response.status === 200) {
+                        alert('Student updated successfully!');
+                        resetForm();
+                        fetchStudents();
+                    } else {
+                        alert('Error updating student.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            } else {
+                try {
+                    const response = await fetch(apiBaseUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    if (response.status === 201) {
+                        alert('Student added successfully!');
+                        resetForm();
+                        fetchStudents();
+                    } else {
+                        alert('Error adding student. S_ID must be unique.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+        });
+
+        // Trigger Edit Mode
+        function editStudent(id) {
+            const student = allStudents.find(s => s.id === id);
+            if (student) {
+                document.getElementById('studentId').value = student.id;
+                document.getElementById('name').value = student.name;
+                document.getElementById('age').value = student.age;
+                document.getElementById('s_id').value = student.s_id;
+                document.getElementById('cgpa').value = student.cgpa;
+                document.getElementById('semester').value = student.semester;
+
+                document.getElementById('formTitle').innerText = "Edit Student";
+                document.getElementById('submitBtn').innerText = "Update Student";
+                document.getElementById('submitBtn').classList.replace('bg-blue-600', 'bg-green-600');
+                document.getElementById('cancelBtn').classList.remove('hidden');
+            }
+        }
+
+        // Reset form
+        function resetForm() {
+            document.getElementById('studentForm').reset();
+            document.getElementById('studentId').value = '';
+            document.getElementById('formTitle').innerText = "Add New Student";
+            document.getElementById('submitBtn').innerText = "Save Student";
+            document.getElementById('submitBtn').classList.replace('bg-green-600', 'bg-blue-600');
+            document.getElementById('cancelBtn').classList.add('hidden');
+        }
+
+        // Delete student
+        async function deleteStudent(id) {
+            if (confirm('Are you sure you want to delete this student?')) {
+                try {
+                    const response = await fetch(`${apiBaseUrl}${id}/delete/`, { method: 'DELETE' });
+                    if (response.status === 204) {
+                        alert('Student deleted!');
+                        fetchStudents();
+                    } else {
+                        alert('Something went wrong.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
+        }
+
+        window.onload = fetchStudents;
+    </script>
+</body>
+</html>
