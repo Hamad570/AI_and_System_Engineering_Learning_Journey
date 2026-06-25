@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Secured Voting Core</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-main: #b9e5eca4;
+            --sidebar-bg: #2c3e50;
+            --sidebar-active: #1abc9c;
+            --text-light: #ecf0f1;
+            --card-bg: #ffffff;
+            --primary-accent: #34495e;
+            --border-color: #dcdde1;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { display: flex; height: 100vh; background-color: var(--bg-main); color: #333; overflow: hidden; }
+        #sidebar { width: 260px; background-color: var(--sidebar-bg); display: flex; flex-direction: column; padding: 20px 0; }
+        #sidebar h2 { color: var(--text-light); text-align: center; margin-bottom: 30px; font-size: 20px; font-weight: 600; letter-spacing: 1px; }
+        .nav-btn { background: none; border: none; color: #07e690; padding: 15px 25px; text-align: left; font-size: 16px; cursor: pointer; transition: all 0.3s ease; width: 100%; }
+        .nav-btn:hover { background-color: rgba(196, 184, 184, 0); color: #fff; }
+        .nav-btn.active { background-color: var(--sidebar-active); color: rgb(231, 226, 226); border-radius: 0 25px 25px 0; font-weight: bold; }
+        #main-content { flex: 1; padding: 40px; overflow-y: auto; position: relative; }
+        .view-panel { display: none; }
+        .view-panel.active-view { display: block; animation: fadeIn 0.4s ease; }
+        .auth-status-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; background: var(--card-bg); padding: 15px 25px; border-radius: 8px; border: 1px solid var(--border-color); }
+        .card { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(238, 52, 52, 0.02); }
+        h3 { margin-bottom: 20px; color: var(--primary-accent); }
+        input, select { width: 100%; padding: 10px 14px; margin: 8px 0 16px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 14px; }
+        button.btn { background: var(--sidebar-bg); color: rgb(233, 220, 220); padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
+        button.btn:hover { opacity: 0.9; }
+        button.btn-danger { background: #e74c3c; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        table th, table td { padding: 12px; border: 1px solid var(--border-color); text-align: left; }
+        table th { background-color: #eaeded; color: var(--primary-accent); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <h2>VOTE LEDGER</h2>
+        <button class="nav-btn" onclick="navigateTo('/chain')">Chain Network & Graph</button>
+        <button class="nav-btn" onclick="navigateTo('/candidates')">Manage Candidates</button>
+        <button class="nav-btn" onclick="navigateTo('/vote')">Cast Vote Form</button>
+    </div>
+
+    <div id="main-content">
+        <div class="auth-status-bar">
+            <span id="auth-info">🔒 Access Restriction Mode: Guest Active</span>
+            <div id="auth-actions">
+                <input type="text" id="username-in" placeholder="Username" style="width:120px; margin:0 5px; display:inline-block;">
+                <input type="password" id="password-in" placeholder="Password" style="width:120px; margin:0 5px; display:inline-block;">
+                <button class="btn" onclick="handleAuthLogin()">Auth Login</button>
+            </div>
+        </div>
+
+        <div id="view-chain" class="view-panel">
+            <div class="card">
+                <h3>Live Standings Engine</h3>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <canvas id="votingChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Immutable Blockchain Records Ledger</h3>
+                <table>
+                    <thead>
+                        <tr><th>Index</th><th>Timestamp</th><th>Payload</th><th>Prev Hash</th><th>Block Hash</th></tr>
+                    </thead>
+                    <tbody id="chain-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="view-candidates" class="view-panel">
+            <div class="card">
+                <h3>Add New Voting Candidate</h3>
+                <input type="text" id="new-candidate-name" placeholder="Candidate Name">
+                <input type="text" id="new-candidate-party" placeholder="Party Name (e.g., PTI, PMLN)">
+                <button class="btn" onclick="addCandidate()">Deploy Candidate</button>
+            </div>
+            <div class="card">
+                <h3>Existing Registered Candidates</h3>
+                <table>
+                    <thead>
+                        <tr><th>ID</th><th>Name</th><th>Party</th><th>Total Score</th><th>Authorized Operator</th><th>Actions</th></tr>
+                    </thead>
+                    <tbody id="candidates-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="view-vote" class="view-panel">
+            <div class="card">
+                <h3>Secure Blockchain Voting Form</h3>
+                <label>Unique Voter Identification String</label>
+                <input type="text" id="voter-id-field" placeholder="Example: CNIC, Hash ID, Passport Code">
+                
+                <label>Select Preferred Target Candidate</label>
+                <select id="vote-candidate-select"></select>
+                
+                <button class="btn" style="background: var(--sidebar-active);" onclick="submitVotePayload()">Cast Secure Vote</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let authToken = null;
+        let votingChart = null;
+
+        const routes = {
+            '/chain': 'view-chain',
+            '/candidates': 'view-candidates',
+            '/vote': 'view-vote'
+        };
+
+        window.addEventListener('popstate', () => {
+            renderRoute(window.location.pathname);
+        });
+
+        function navigateTo(url) {
+            history.pushState(null, null, url);
+            renderRoute(url);
+        }
+
+        function renderRoute(url) {
+            document.querySelectorAll('.view-panel').forEach(el => el.classList.remove('active-view'));
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            
+            const targetedRoute = routes[url] ? url : '/chain';
+            const viewId = routes[targetedRoute];
+            
+            document.getElementById(viewId).classList.add('active-view');
+            
+            const targetBtnIndex = Object.keys(routes).indexOf(targetedRoute);
+            document.querySelectorAll('.nav-btn')[targetBtnIndex].classList.add('active');
+
+            syncGlobalDataData();
+        }
+
+        async function handleAuthLogin() {
+            const u = document.getElementById('username-in').value;
+            const p = document.getElementById('password-in').value;
+            const res = await fetch('/api/login/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({username: u, password: p})
+            });
+            if(res.ok) {
+                const data = await res.json();
+                authToken = data.token;
+                document.getElementById('auth-info').innerText = `🔓 Authenticated Session: Active Mode (${u})`;
+                document.getElementById('auth-actions').style.display = 'none';
+                syncGlobalDataData();
+            } else {
+                alert('Authentication Failed');
+            }
+        }
+
+        // ====== YEH HAI WOH UPDATED FUNCTION JO AB LIVE HISTORY BHI FETCH KAREGA ======
+        async function syncGlobalDataData() {
+            // 1. Load Candidates for Dropdown and Admin Table
+            const candidateRes = await fetch('/api/candidates/');
+            const candidates = await candidateRes.json();
+            
+            const selectEl = document.getElementById('vote-candidate-select');
+            selectEl.innerHTML = '';
+            candidates.forEach(c => {
+                selectEl.innerHTML += `<option value="${c.id}">${c.name} (${c.party_name})</option>`;
+            });
+
+            const tableBody = document.getElementById('candidates-table-body');
+            tableBody.innerHTML = '';
+            candidates.forEach(c => {
+                tableBody.innerHTML += `
+                    <tr>
+                        <td>${c.id}</td>
+                        <td><input type="text" value="${c.name}" id="cand-name-${c.id}" style="width:140px; margin:0;"></td>
+                        <td><input type="text" value="${c.party_name || ''}" id="cand-party-${c.id}" style="width:110px; margin:0;"></td>
+                        <td><strong>${c.vote_count}</strong></td>
+                        <td>${c.updated_by_username || 'System Initializer'}</td>
+                        <td>
+                            <button class="btn" style="padding:4px 8px;" onclick="updateCandidate(${c.id})">Update</button>
+                            <button class="btn btn-danger" style="padding:4px 8px;" onclick="deleteCandidate(${c.id})">Delete</button>
+                        </td>
+                    </tr>`;
+            });
+
+            // 2. Fetch and Render Blockchain Ledger History Table
+            try {
+                const historyRes = await fetch('/api/history/');
+                if (historyRes.ok) {
+                    const blocks = await historyRes.json();
+                    const chainTableBody = document.getElementById('chain-table-body');
+                    chainTableBody.innerHTML = ''; // Clear previous UI rows
+                    
+                    blocks.forEach(b => {
+                        const formattedTime = new Date(b.timestamp * 1000).toLocaleTimeString();
+                        chainTableBody.innerHTML += `
+                            <tr>
+                                <td><strong>#${b.index}</strong></td>
+                                <td>${formattedTime}</td>
+                                <td><span style="color:#1abc9c; font-weight:bold;">${b.candidate}</span> (${b.voter})</td>
+                                <td style="font-family:monospace; font-size:11px; max-width:150px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${b.previous_hash}">${b.previous_hash}</td>
+                                <td style="font-family:monospace; font-size:11px; max-width:150px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${b.block_hash}">${b.block_hash}</td>
+                            </tr>`;
+                    });
+                }
+            } catch (err) {
+                console.log("History endpoint not ready yet:", err);
+            }
+
+            updateChartRepresentation(candidates);
+        }
+
+        function updateChartRepresentation(candidates) {
+            const labels = candidates.map(c => `${c.name} (${c.party_name || 'IND'})`);
+            const data = candidates.map(c => c.vote_count);
+
+            if (votingChart) {
+                votingChart.data.labels = labels;
+                votingChart.data.datasets[0].data = data;
+                votingChart.update();
+            } else {
+                const ctx = document.getElementById('votingChart').getContext('2d');
+                votingChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Chained Node Votes Volume',
+                            data: data,
+                            backgroundColor: '#1abc9c',
+                            borderColor: '#16a085',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: { scales: { y: { beginAtZero: true } } }
+                });
+            }
+        }
+
+        async function addCandidate() {
+            const name = document.getElementById('new-candidate-name').value;
+            const party_name = document.getElementById('new-candidate-party').value;
+            
+            const headers = { 'Content-Type': 'application/json' };
+            if (authToken) {
+                headers['Authorization'] = 'Token ' + authToken;
+            }
+
+            const res = await fetch('/api/candidates/', {
+                method: 'POST',
+                headers: headers,
+                body: JSON.stringify({ name, party_name })
+            });
+            if(res.ok) {
+                document.getElementById('new-candidate-name').value = '';
+                document.getElementById('new-candidate-party').value = '';
+                syncGlobalDataData();
+            } else {
+                alert('Unauthorized/Error Processing Request. Please Auth Login first.');
+            }
+        }
+
+        async function updateCandidate(id) {
+            const name = document.getElementById(`cand-name-${id}`).value;
+            const party_name = document.getElementById(`cand-party-${id}`).value;
+            
+            const headers = { 'Content-Type': 'application/json' };
+            if (authToken) {
+                headers['Authorization'] = 'Token ' + authToken;
+            }
+
+            const res = await fetch(`/api/candidates/${id}/`, {
+                method: 'PUT',
+                headers: headers,
+                body: JSON.stringify({ name, party_name })
+            });
+            if(res.ok) syncGlobalDataData(); else alert('Unauthorized/Error Processing Request');
+        }
+
+        async function deleteCandidate(id) {
+            const headers = {};
+            if (authToken) {
+                headers['Authorization'] = 'Token ' + authToken;
+            }
+
+            const res = await fetch(`/api/candidates/${id}/`, {
+                method: 'DELETE',
+                headers: headers
+            });
+            if(res.ok) syncGlobalDataData(); else alert('Unauthorized/Error Processing Request');
+        }
+
+        async function submitVotePayload() {
+            const candidate_id = document.getElementById('vote-candidate-select').value;
+            const voter_id = document.getElementById('voter-id-field').value;
+            const res = await fetch('/api/vote/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ candidate_id, voter_id })
+            });
+            if(res.ok) {
+                alert('Success: Vote hash chained!');
+                document.getElementById('voter-id-field').value = '';
+                syncGlobalDataData();
+            } else {
+                const errData = await res.json();
+                alert(errData.error || 'Failed to drop block.');
+            }
+        }
+
+        navigateTo(window.location.pathname);
+    </script>
+</body>
+</html>
