@@ -1,0 +1,1 @@
+AI Engineering is the technical discipline that bridges the gap between machine learning research and practical production. It applies core software and data engineering principles to design, scale, and reliably deploy AI systems in real-world environments, transforming intelligent prototypes into robust, functional, and scalable commercial applications
